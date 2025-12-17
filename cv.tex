@@ -1,0 +1,284 @@
+\documentclass[a4paper,10pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[hidelinks]{hyperref}
+
+% Page setup
+\geometry{
+    left=0cm,
+    right=0cm,
+    top=0cm,
+    bottom=0cm,
+    paperwidth=21cm,
+    paperheight=29.7cm
+}
+
+\pagestyle{empty}
+
+% Color definitions (VS Code Dark Theme)
+\definecolor{darkbg}{RGB}{30,30,30}
+\definecolor{sidebarbg}{RGB}{26,26,26}
+\definecolor{textcolor}{RGB}{212,212,212}
+\definecolor{commentcolor}{RGB}{106,153,85}
+\definecolor{keywordcolor}{RGB}{86,156,214}
+\definecolor{classcolor}{RGB}{78,201,176}
+\definecolor{stringcolor}{RGB}{206,145,120}
+\definecolor{variablecolor}{RGB}{156,220,254}
+\definecolor{methodcolor}{RGB}{220,220,170}
+\definecolor{numbercolor}{RGB}{181,206,168}
+\definecolor{accentcolor}{RGB}{0,122,204}
+
+% Custom commands
+\newcommand{\keyword}[1]{{\color{keywordcolor}\texttt{#1}}}
+\newcommand{\classname}[1]{{\color{classcolor}\texttt{#1}}}
+\newcommand{\stringval}[1]{{\color{stringcolor}\texttt{"#1"}}}
+\newcommand{\variable}[1]{{\color{variablecolor}\texttt{#1}}}
+\newcommand{\method}[1]{{\color{methodcolor}\texttt{#1}}}
+\newcommand{\comment}[1]{{\color{commentcolor}\texttt{#1}}}
+\newcommand{\numval}[1]{{\color{numbercolor}\texttt{#1}}}
+
+\begin{document}
+
+% Background
+\pagecolor{darkbg}
+\color{textcolor}
+
+% Main container
+\begin{tikzpicture}[remember picture,overlay]
+    % Sidebar background
+    \fill[sidebarbg] (current page.north west) rectangle ([xshift=6cm]current page.south west);
+    
+    % Vertical separator line
+    \draw[color=gray!30, line width=0.5pt] ([xshift=6cm]current page.north west) -- ([xshift=6cm]current page.south west);
+\end{tikzpicture}
+
+\noindent
+\begin{minipage}[t]{5.8cm}
+\vspace{0.5cm}
+\raggedright
+
+% Profile Image Section
+\begin{center}
+\texttt{\color{gray!70}<img>}
+
+\vspace{0.3cm}
+\includegraphics[width=4.5cm,height=4.5cm,keepaspectratio]{profile.jpg}
+
+\vspace{0.3cm}
+\texttt{\color{gray!70}</img>}
+\end{center}
+
+\vspace{0.5cm}
+
+% PLATEFORMES
+{\small\keyword{public enum} \classname{PLATEFORMES}\texttt{()}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\texttt{Windows,}\\
+\hspace{0.5cm}\texttt{Linux,}\\
+\hspace{0.5cm}\texttt{Mobile}
+}
+
+\vspace{0.5cm}
+
+% LANGAGES
+{\small\keyword{public enum} \classname{LANGAGES}\texttt{()}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\texttt{C\#, C++, C,}\\
+\hspace{0.5cm}\texttt{Python, Bash, LUA,}\\
+\hspace{0.5cm}\texttt{Java, HTML5, CSS,}\\
+\hspace{0.5cm}\texttt{JavaScript}
+}
+
+\vspace{0.5cm}
+
+% LOGICIELS
+{\small\keyword{public enum} \classname{LOGICIELS}\texttt{()}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\texttt{Unity3D,}\\
+\hspace{0.5cm}\texttt{UnrealEngine,}\\
+\hspace{0.5cm}\texttt{Godot4, VisualStudio,}\\
+\hspace{0.5cm}\texttt{Jetbrains, PhotoShop,}\\
+\hspace{0.5cm}\texttt{GoogleSuite, Blender,}\\
+\hspace{0.5cm}\texttt{AdobePremier,}\\
+\hspace{0.5cm}\texttt{AdobeSubstancePainter,}\\
+\hspace{0.5cm}\texttt{AdobeSubstance3D}
+}
+
+\vspace{0.5cm}
+
+% MEDIA
+{\small\keyword{public enum} \classname{MEDIA}\texttt{()}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\texttt{itch.io,}\\
+\hspace{0.5cm}\texttt{\color{stringcolor}itch.io/yourprofile}\\
+\hspace{0.5cm}\texttt{LinkedIn,}\\
+\hspace{0.5cm}\texttt{\color{stringcolor}/in/yourprofile}\\
+\hspace{0.5cm}\texttt{GitHub}\\
+\hspace{0.5cm}\texttt{\color{stringcolor}github.com/YourName}
+}
+
+\vspace{0.5cm}
+
+% LANGUES
+{\small\keyword{public enum} \classname{LANGUES}\texttt{()}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\comment{// Native}\\
+\hspace{0.5cm}\texttt{FRANCAIS = C1,}\\
+\hspace{0.5cm}\comment{// Fluent}\\
+\hspace{0.5cm}\texttt{ANGLAIS = B2,}\\
+\hspace{0.5cm}\comment{// Intermediate}\\
+\hspace{0.5cm}\texttt{POLONAIS = B2,}
+}
+
+\vspace{0.5cm}
+
+% PROFIL
+{\small\keyword{public enum} \classname{PROFIL}\texttt{()}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\texttt{CURIEUX,}\\
+\hspace{0.5cm}\texttt{PONCTUEL,}\\
+\hspace{0.5cm}\texttt{RIGOUREUX,}\\
+\hspace{0.5cm}\texttt{METICULEUX,}\\
+\hspace{0.5cm}\texttt{EMPHATIQUE,}\\
+\hspace{0.5cm}\texttt{SOCIAL}
+}
+
+\end{minipage}%
+\hspace{0.5cm}%
+\begin{minipage}[t]{14cm}
+\vspace{0.5cm}
+\raggedright
+
+% Summary Comment
+{\small
+\comment{/// <summary>}\\
+\comment{/// Recherche une alternance en programmation C\# sur Unity3D}\\
+\comment{/// ou en C++ sur Unreal Engine. Pour une durée de 2 ans}\\
+\comment{/// à jours entreprise, 1 jour école. Disponible IMMÉDIATEMENT.}\\
+\comment{/// </summary>}
+}
+
+\vspace{0.5cm}
+
+% INFORMATION Class
+{\small\keyword{public class} \classname{INFORMATION}}
+
+\vspace{0.2cm}
+{\small\texttt{\{}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\keyword{public string} \variable{NOM} \texttt{=} \stringval{YOUR NAME}\texttt{;}\\
+\hspace{0.5cm}\keyword{public string} \variable{TITRE} \texttt{=} \stringval{Game Programmer}\texttt{;}\\
+\hspace{0.5cm}\keyword{public string} \variable{EMAIL} \texttt{=} \stringval{your.email@gmail.com}\texttt{;}\\
+\hspace{0.5cm}\keyword{public string} \variable{TELEPHONE} \texttt{=} \stringval{07 83 34 80 10}\texttt{;}\\
+\hspace{0.5cm}\keyword{public string[]} \variable{POSITION} \texttt{= \{}\stringval{Your-City}\texttt{,} \stringval{77380}\texttt{,}\\
+\hspace{1.5cm}\stringval{Your-Region}\texttt{,} \stringval{Country}\texttt{\};}\\
+\hspace{0.5cm}\keyword{public bool} \variable{PERMIS\_B\_VÉHICULE} \texttt{=} \keyword{true}\texttt{;}\\
+\hspace{0.5cm}\keyword{public int} \variable{ÂGE} \texttt{=} \numval{21}\texttt{;}
+}
+
+\vspace{0.2cm}
+{\small\texttt{\}}}
+
+\vspace{0.5cm}
+
+% FORMATIONS Class
+{\small\keyword{public partial class} \classname{FORMATIONS} \texttt{:} \classname{ÉcolesSupérieures}}
+
+\vspace{0.2cm}
+{\small\texttt{\{}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\keyword{private void} \method{YnovConnect}\texttt{()}\\
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\keyword{var} \variable{\_Niveau} \texttt{=} \classname{Mastère}\texttt{;} \comment{// Pour une durée de 2 ans}\\
+\hspace{1cm}\keyword{var} \variable{\_Date} \texttt{=} \classname{Aujourd'hui}\texttt{;}\\
+\hspace{1cm}\keyword{var} \variable{\_Type} \texttt{=} \classname{Game}\texttt{.}\method{Programmer}\texttt{();}\\
+\hspace{0.5cm}\texttt{\}}
+}
+
+\vspace{0.3cm}
+{\footnotesize
+\hspace{0.5cm}\keyword{private void} \method{ICAN}\texttt{(}\keyword{string}\texttt{[]} \variable{\_Diplômes}\texttt{)}\\
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\keyword{var} \variable{\_Niveau} \texttt{=} \classname{Bachelor}\texttt{;}\\
+\hspace{1cm}\keyword{var} \variable{\_Date} \texttt{=} \method{Range}\texttt{(}\keyword{début}\texttt{:} \stringval{Octobre 2021}\texttt{,} \keyword{fin}\texttt{:} \stringval{Juin 2024}\texttt{);}\\
+\hspace{1cm}\keyword{var} \variable{\_Type} \texttt{=} \classname{Game}\texttt{.}\method{Design}\texttt{();}\\
+\hspace{1cm}\variable{\_Diplômes} \texttt{= \{}\stringval{Game Design}\texttt{,} \stringval{Designer Numérique}\texttt{\};}\\
+\hspace{1cm}\keyword{var} \variable{\_Obtention} \texttt{=} \stringval{Samedi 24 Juin 2024}\texttt{;}\\
+\hspace{0.5cm}\texttt{\}}
+}
+
+\vspace{0.2cm}
+{\small\texttt{\}}}
+
+\vspace{0.5cm}
+
+% EXPERIENCES Class
+{\small\keyword{public static class} \classname{EXPERIENCES}}
+
+\vspace{0.2cm}
+{\small\texttt{\{}}
+
+\vspace{0.2cm}
+{\footnotesize
+\hspace{0.5cm}\keyword{public void} \method{StudioPREMA}\texttt{()}\\
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\keyword{var} \variable{\_Durée} \texttt{=} \method{Range}\texttt{(}\keyword{début}\texttt{:} \stringval{Septembre 2024}\texttt{,} \keyword{fin}\texttt{:} \stringval{Novembre 2024}\texttt{);}\\
+\hspace{1cm}\keyword{var} \variable{\_Lien} \texttt{=} \stringval{https://aftv.accor.com/fr/studio-prema.html}\texttt{;}\\
+\hspace{1cm}\keyword{var} \variable{\_Type} \texttt{=} \keyword{new} \classname{Stage}\texttt{;}\\
+\hspace{1cm}\comment{/*StudioPREMA est un petit studio de jeux vidéos PC fondé par}\\
+\hspace{1cm}\comment{Steven BERDIN et Théo DIEU pour projet EKILA...*/}\\
+\hspace{0.5cm}\texttt{\}}
+}
+
+\vspace{0.3cm}
+{\footnotesize
+\hspace{0.5cm}\keyword{public void} \method{LeDouzième}\texttt{()}\\
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\keyword{var} \variable{\_Type} \texttt{=} \keyword{new} \classname{Association}\texttt{;}\\
+\hspace{1cm}\comment{/*Le Douzième est une association que j'ai fondé...*/}\\
+\hspace{0.5cm}\texttt{\}}
+}
+
+\vspace{0.2cm}
+{\small\texttt{\}}}
+
+\end{minipage}
+
+% Like button in bottom right
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east] at ([xshift=-1.5cm,yshift=1.5cm]current page.south east) {
+        \begin{tikzpicture}
+            \draw[accentcolor, line width=2pt, rounded corners=20pt] (0,0) rectangle (2,2.5);
+            \node at (1,1.7) {\includegraphics[width=1.2cm]{thumbs-up.png}};
+            \node[color=textcolor, font=\Large\bfseries] at (1,0.5) {1.7K};
+        \end{tikzpicture}
+    };
+\end{tikzpicture}
+
+\end{document}
