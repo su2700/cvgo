@@ -33,7 +33,7 @@
             min-height: 297mm;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 180px 1fr;
+            grid-template-columns: 220px 1fr;
             grid-template-rows: auto;
             position: relative;
         }
@@ -51,7 +51,7 @@
 
         /* Sidebar */
         .sidebar {
-            width: 180px;
+            width: 220px;
             background-color: #1e1e1e;
             padding: 20px;
             font-size: 16px;
@@ -266,89 +266,100 @@
         </div>
 
         <div class="enum-section">
-            <div class="enum-header"><span class="keyword">public enum</span> <span
-                    class="class-name">PLATFORMS</span>()</div>
+            <div class="enum-header"><span class="keyword">var</span> <span class="class-name">Platforms</span> =
+                []<span class="type">string</span></div>
             <div class="opening-brace">{</div>
             <div class="enum-items">
-                <div class="enum-item">Windows,</div>
-                <div class="enum-item">Linux,</div>
-                <div class="enum-item">Cloud</div>
+                <div class="enum-item"><span class="string">"Windows"</span>,</div>
+                <div class="enum-item"><span class="string">"Linux"</span>,</div>
+                <div class="enum-item"><span class="string">"Cloud"</span>,</div>
             </div>
             <div class="closing-brace">}</div>
         </div>
 
         <div class="enum-section">
-            <div class="enum-header"><span class="keyword">public enum</span> <span class="class-name">LANGAGES</span>()
+            <div class="enum-header"><span class="keyword">var</span> <span class="class-name">Programming</span> =
+                []<span class="type">string</span>
             </div>
             <div class="opening-brace">{</div>
             <div class="enum-items">
-                <div class="enum-item">C#, C++, C,</div>
-                <div class="enum-item">Python, Bash, Golang,</div>
-                <div class="enum-item">Java, HTML5, CSS,</div>
-                <div class="enum-item">JavaScript</div>
+                <div class="enum-item"><span class="string">"C#"</span>, <span class="string">"C++"</span>, <span
+                        class="string">"C"</span>,</div>
+                <div class="enum-item"><span class="string">"Python"</span>, <span class="string">"Bash"</span>, <span
+                        class="string">"Golang"</span>,</div>
+                <div class="enum-item"><span class="string">"Java"</span>, <span class="string">"HTML5"</span>, <span
+                        class="string">"CSS"</span>,</div>
+                <div class="enum-item"><span class="string">"JavaScript"</span>,</div>
             </div>
             <div class="closing-brace">}</div>
         </div>
 
         <div class="enum-section">
-            <div class="enum-header"><span class="keyword">public enum</span> <span class="class-name">SOFTWARE</span>()
+            <div class="enum-header"><span class="keyword">var</span> <span class="class-name">Software</span> = []<span
+                    class="type">string</span>
             </div>
             <div class="opening-brace">{</div>
             <div class="enum-items">
-                <div class="enum-item">BurpSuite,</div>
-                <div class="enum-item">Metasploit,</div>
-                <div class="enum-item">Nmap, Wireshark,</div>
-                <div class="enum-item">Nessus, Hashcat,</div>
-                <div class="enum-item">SQLMap, Hydra,</div>
-                <div class="enum-item">Aircrack-ng,</div>
-                <div class="enum-item">OWASP_ZAP</div>
-            </div>
-            <div class="closing-brace">}</div>
-        </div>
-
-        <div class="enum-section">
-            <div class="enum-header"><span class="keyword">public enum</span> <span class="class-name">MEDIA</span>()
-            </div>
-            <div class="opening-brace">{</div>
-            <div class="enum-items">
-                <div class="enum-item">LinkedIn,</div>
-                <div class="enum-item"><a href="https://linkedin.com/in/noah-h-liu-2066b846/" class="string"
-                        style="text-decoration: none; color: #ce9178; word-break: break-all;">linkedin.com/in/noah-h-liu-2066b846/</a>
+                <div class="enum-item"><span class="string">"BurpSuite"</span>,</div>
+                <div class="enum-item"><span class="string">"Metasploit"</span>,</div>
+                <div class="enum-item"><span class="string">"Nmap"</span>, <span class="string">"Wireshark"</span>,
                 </div>
-                <div class="enum-item">GitHub</div>
-                <div class="enum-item"><a href="https://github.com/su2700/" class="string"
-                        style="text-decoration: none; color: #ce9178;">github.com/su2700/</a></div>
+                <div class="enum-item"><span class="string">"Nessus"</span>, <span class="string">"Hashcat"</span>,
+                </div>
+                <div class="enum-item"><span class="string">"SQLMap"</span>, <span class="string">"Hydra"</span>,</div>
+                <div class="enum-item"><span class="string">"Aircrack-ng"</span>,</div>
+                <div class="enum-item"><span class="string">"OWASP_ZAP"</span>,</div>
             </div>
             <div class="closing-brace">}</div>
         </div>
 
         <div class="enum-section">
-            <div class="enum-header"><span class="keyword">public enum</span> <span
-                    class="class-name">LANGUAGES</span>()
+            <div class="enum-header"><span class="keyword">var</span> <span class="class-name">Media</span> = <span
+                    class="keyword">map</span>[<span class="type">string</span>]<span class="type">string</span>
             </div>
             <div class="opening-brace">{</div>
             <div class="enum-items">
+                <div class="enum-item"><span class="string">"LinkedIn"</span>:</div>
+                <div class="enum-item"><a href="https://www.linkedin.com/in/noah-h-liu-2066b846/" class="string"
+                        style="text-decoration: none; color: #ce9178; word-break: break-all;">"www.linkedin.com/in/noah-h-liu-2066b846/"</a>,
+                </div>
+                <div class="enum-item"><span class="string">"GitHub"</span>:</div>
+                <div class="enum-item"><a href="https://github.com/su2700" class="string"
+                        style="text-decoration: none; color: #ce9178;">"github.com/su2700"</a>,</div>
+            </div>
+            <div class="closing-brace">}</div>
+        </div>
+
+        <div class="enum-section">
+            <div class="enum-header"><span class="keyword">var</span> <span class="class-name">Languages</span> = <span
+                    class="keyword">map</span>[<span class="type">string</span>]<span class="type">string</span>
+            </div>
+            <div class="opening-brace">{</div>
+            <div class="enum-items">
+
+                <div class="enum-item"><span class="string">"English"</span>: <span class="string">"C1"</span>,</div>
                 <div class="enum-item comment">// Fluent</div>
-                <div class="enum-item">ENGLISH = C1,</div>
+                <div class="enum-item"><span class="string">"Swedish"</span>: <span class="string">"B2"</span>,</div>
                 <div class="enum-item comment">// Intermediate</div>
-                <div class="enum-item">SWEDISH = B2,</div>
+
+                <div class="enum-item"><span class="string">"Chinese"</span>: <span class="string">"C2"</span>,</div>
                 <div class="enum-item comment">// Native</div>
-                <div class="enum-item">CHINESE = C2</div>
             </div>
             <div class="closing-brace">}</div>
         </div>
 
         <div class="enum-section">
-            <div class="enum-header"><span class="keyword">public enum</span> <span class="class-name">PROFILE</span>()
+            <div class="enum-header"><span class="keyword">var</span> <span class="class-name">Profile</span> = []<span
+                    class="type">string</span>
             </div>
             <div class="opening-brace">{</div>
             <div class="enum-items">
-                <div class="enum-item">CURIOUS,</div>
-                <div class="enum-item">PUNCTUAL,</div>
-                <div class="enum-item">RIGOROUS,</div>
-                <div class="enum-item">METICULOUS,</div>
-                <div class="enum-item">EMPATHETIC,</div>
-                <div class="enum-item">SOCIAL</div>
+                <div class="enum-item"><span class="string">"CTF Competitor"</span>,</div>
+                <div class="enum-item"><span class="string">"Sports Enthusiast"</span>,</div>
+                <div class="enum-item"><span class="string">"Music Aficionado"</span>,</div>
+                <div class="enum-item"><span class="string">"Culinary Explorer"</span>,</div>
+                <div class="enum-item"><span class="string">"Animal Lover"</span>,</div>
+                <div class="enum-item"><span class="string">"Family Oriented"</span>,</div>
             </div>
             <div class="closing-brace">}</div>
         </div>
@@ -356,106 +367,74 @@
 
     <div class="main-content">
         <div class="code-section">
+            <div class="class-declaration">
+                <span class="keyword">package</span> main
+            </div>
+            <div class="class-declaration">
+                <span class="keyword">import</span> <span class="string">"fmt"</span>
+            </div>
+            <br>
             <div class="comment-block">
-                <div class="comment">/// &lt;summary&gt;</div>
-                <div class="comment">/// Seeking internship as pentester.</div>
-                <div class="comment">/// Duration: 2 years. Rhythm: Work-study.</div>
-                <div class="comment">/// Available IMMEDIATELY.</div>
-                <div class="comment">/// Passed OSCP+</div>
-                <div class="comment">/// &lt;/summary&gt;</div>
+                <div class="comment">// Summary</div>
+                <div class="comment">// Seeking intern as Pentester, Security Engineer.</div>
+                <div class="comment">// Available IMMEDIATELY.</div>
+                <div class="comment">// Passed OSCP+</div>
             </div>
         </div>
 
         <div class="code-section">
             <div class="class-declaration">
-                <span class="keyword">public class</span> <span class="class-name">INFORMATION</span>
+                <span class="keyword">var</span> <span class="variable">Info</span> = <span
+                    class="keyword">struct</span> {
+                <span class="variable">Name</span>, <span class="variable">Email</span>, <span
+                    class="variable">Phone</span> <span class="type">string</span>
+                <span class="variable">Location</span> []<span class="type">string</span>
+                <span class="variable">DrivingLicense</span> <span class="type">bool</span>
+                }
             </div>
             <div class="opening-brace">{</div>
             <div class="class-body">
                 <div class="property">
-                    <span class="keyword">public string</span> <span class="variable">NAME</span> = <span
-                        class="string">"Noah H.Liu"</span>;
-                </div>
-                <div class="property">
-                    <span class="keyword">public string</span> <span class="variable">TITLE</span> = <span
-                        class="string">"Jr Pentester"</span>;
-                </div>
-                <div class="property">
-                    <span class="keyword">public string</span> <span class="variable">EMAIL</span> = <span
-                        class="string">"noah.h.liu@gmail.com"</span>;
-                </div>
-                <div class="property">
-                    <span class="keyword">public string</span> <span class="variable">PHONE</span> = <span
-                        class="string">"0765524558"</span>;
-                </div>
-                <div class="property">
-                    <span class="keyword">public string[]</span> <span class="variable">LOCATION</span> = {<span
-                        class="string">"Malmö"</span>, <span class="string">"Sweden"</span>};
-                </div>
-                <div class="property">
-                    <span class="keyword">public bool</span> <span class="variable">DRIVING_LICENSE</span> = <span
-                        class="keyword">true</span>;
+                    <span class="variable">Name</span>: <span class="string">"Noah H.Liu"</span>,
                 </div>
 
+                <div class="property">
+                    <span class="variable">Email</span>: <span class="string">"noah.h.liu@gmail.com"</span>,
+                </div>
+                <div class="property">
+                    <span class="variable">Phone</span>: <span class="string">"+46-7655-24558"</span>,
+                </div>
+                <div class="property">
+                    <span class="variable">Location</span>: []<span class="type">string</span>{<span
+                        class="string">"Malmö"</span>, <span class="string">"Sweden"</span>},
+                </div>
+                <div class="property">
+                    <span class="variable">DrivingLicense</span>: <span class="keyword">true</span>,
+                </div>
             </div>
             <div class="closing-brace">}</div>
         </div>
 
         <div class="code-section">
             <div class="class-declaration">
-                <span class="keyword">public partial class</span> <span class="class-name">EDUCATION</span> : <span
-                    class="class-name">HigherEducation</span>
+                <span class="keyword">func</span> <span class="function">Education</span>()
             </div>
             <div class="opening-brace">{</div>
             <div class="class-body">
-                <div class="method-declaration">
-                    <span class="keyword">private void</span> <span class="method-name">YnovConnect</span>()
-                </div>
-                <div class="opening-brace">{</div>
-                <div class="method-body">
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Level</span> = <span
-                            class="class-name">Master</span>; <span class="comment">// Duration: 2 years</span>
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Date</span> = <span
-                            class="class-name">Present</span>;
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Type</span> = <span
-                            class="class-name">Game</span>.<span class="method-name">Programmer</span>();
-                    </div>
-                </div>
-                <div class="closing-brace">}</div>
 
-                <div class="method-declaration">
-                    <span class="keyword">private void</span> <span class="method-name">ICAN</span>(<span
-                        class="keyword">string</span>[] <span class="variable">_Degrees</span>)
-                </div>
                 <div class="opening-brace">{</div>
                 <div class="method-body">
                     <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Level</span> = <span
-                            class="class-name">Bachelor</span>;
+                        <span class="variable">university</span> := <span class="string">"National Technical University
+                            of Ukraine"</span>
                     </div>
                     <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Date</span> = <span
-                            class="method-name">Range</span>(<span class="keyword">start</span>: <span
-                            class="string">"October
-                            2021"</span>, <span class="keyword">end</span>: <span class="string">"June 2024"</span>);
+                        <span class="variable">field</span> := <span class="string">"Information Systems and Cyber
+                            Security"</span>
                     </div>
                     <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Type</span> = <span
-                            class="class-name">Game</span>.<span class="method-name">Design</span>();
-                    </div>
-                    <div class="property">
-                        <span class="variable">_Degrees</span> = {<span class="string">"Game Design"</span>, <span
-                            class="string">"Digital Designer"</span>};
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Obtained</span> = <span
-                            class="string">"Saturday
-                            June 24, 2024"</span>;
+                        <span class="variable">duration</span> := <span class="function">Range</span>(<span
+                            class="string">"2018"</span>, <span class="string">"2022"</span>)
                     </div>
                 </div>
                 <div class="closing-brace">}</div>
@@ -465,119 +444,201 @@
 
         <div class="code-section">
             <div class="class-declaration">
-                <span class="keyword">public static class</span> <span class="class-name">EXPERIENCES</span>
+                <span class="keyword">func</span> <span class="function">Certifications</span>()
             </div>
             <div class="opening-brace">{</div>
             <div class="class-body">
-                <div class="method-declaration">
-                    <span class="keyword">public void</span> <span class="method-name">ARCAutomotive</span>()
-                </div>
                 <div class="opening-brace">{</div>
                 <div class="method-body">
                     <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Position</span> = <span
-                            class="string">"Software Test Engineer (ADAS)"</span>;
+                        <span class="string">"OffSec Certified Professional+ (OSCP+)"</span>
                     </div>
+                    <div class="comment">// Issued: Dec 2025</div>
                     <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Company</span> = <span
-                            class="string">"ARC AUTOMOTIVE, INC."</span>;
+                        <span class="string">"Microsoft Certified: Azure Fundamentals"</span>
                     </div>
+                    <div class="comment">// Issued: Oct 2022</div>
                     <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Duration</span> = <span
-                            class="method-name">Range</span>(<span class="keyword">start</span>: <span
-                            class="string">"May 2023"</span>, <span class="keyword">end</span>: <span
-                            class="string">"May 2024"</span>); <span class="comment">// 1 yr 1 mo</span>
+                        <span class="string">"Certified Kubernetes Administrator (CKA)"</span>
                     </div>
+                    <div class="comment">// Issued: May 2022</div>
                     <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Location</span> = <span
-                            class="string">"Malmo, Sweden"</span>;
+                        <span class="string">"AWS Certified DevOps Engineer – Professional"</span>
                     </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Type</span> = <span
-                            class="keyword">new</span>
-                        <span class="class-name">FullTime</span>;
-                    </div>
-                    <div class="comment">/* ADAS Test Engineer with hands-on experience testing vehicles</div>
-                    <div class="comment">from Smart, MG, and XPENG. Validated advanced driver assistance</div>
-                    <div class="comment">systems through simulation and real-world vehicle testing. Skilled</div>
-                    <div class="comment">in test design, sensor validation, CAN data analysis, and defect</div>
-                    <div class="comment">tracking with strong focus on safety and quality. */</div>
-                </div>
-                <div class="closing-brace">}</div>
-
-                <div class="method-declaration">
-                    <span class="keyword">public void</span> <span class="method-name">PlejdAB</span>()
-                </div>
-                <div class="opening-brace">{</div>
-                <div class="method-body">
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Position</span> = <span
-                            class="string">"DevOps Engineer (Intern)"</span>;
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Company</span> = <span
-                            class="string">"Plejd AB"</span>;
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Duration</span> = <span
-                            class="method-name">Range</span>(<span class="keyword">start</span>: <span
-                            class="string">"Nov 2022"</span>, <span class="keyword">end</span>: <span
-                            class="string">"Apr 2023"</span>); <span class="comment">// 6 mos</span>
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Location</span> = <span
-                            class="string">"Gothenburg, Sweden"</span>;
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Type</span> = <span
-                            class="keyword">new</span>
-                        <span class="class-name">FullTime</span>;
-                    </div>
-                    <div class="comment">/* Deployed and integrated vulnerability scanners within Kubernetes</div>
-                    <div class="comment">clusters using Kube-bench and Trivy-Operator. Translated scan</div>
-                    <div class="comment">results into actionable insights integrated into DefectDojo for</div>
-                    <div class="comment">comprehensive security assessments and vulnerability management. */</div>
-                </div>
-                <div class="closing-brace">}</div>
-
-                <div class="method-declaration">
-                    <span class="keyword">public void</span> <span class="method-name">PolytechSoftware</span>()
-                </div>
-                <div class="opening-brace">{</div>
-                <div class="method-body">
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Position</span> = <span
-                            class="string">"Salesforce Developer"</span>;
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Company</span> = <span
-                            class="string">"Polytech Software"</span>;
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Duration</span> = <span
-                            class="method-name">Range</span>(<span class="keyword">start</span>: <span
-                            class="string">"Jun 2021"</span>, <span class="keyword">end</span>: <span
-                            class="string">"Aug 2021"</span>); <span class="comment">// 3 mos</span>
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Location</span> = <span
-                            class="string">"Kyiv, Ukraine"</span>;
-                    </div>
-                    <div class="property">
-                        <span class="keyword">var</span> <span class="variable">_Type</span> = <span
-                            class="keyword">new</span>
-                        <span class="class-name">Internship</span>;
-                    </div>
-                    <div class="comment">/* Designed and developed customized solutions within Salesforce.</div>
-                    <div class="comment">Worked on full application lifecycle: planning, analysis, design,</div>
-                    <div class="comment">implementation, testing, deployment. Developed solutions using Apex,</div>
-                    <div class="comment">Triggers, Visualforce, Lightning Components. Designed automated</div>
-                    <div class="comment">processes using Process Builders and Workflows. */</div>
+                    <div class="comment">// Issued: Aug 2022</div>
                 </div>
                 <div class="closing-brace">}</div>
             </div>
             <div class="closing-brace">}</div>
         </div>
+
+        <div class="code-section">
+            <div class="class-declaration">
+                <span class="keyword">func</span> <span class="function">Experiences</span>()
+            </div>
+            <div class="opening-brace">{</div>
+            <div class="class-body">
+
+                <div class="opening-brace">{</div>
+                <div class="method-body">
+                    <div class="property">
+                        <span class="variable">position</span> := <span class="string">"Software Test Engineer
+                            (ADAS)"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">company</span> := <span class="string">"ARC AUTOMOTIVE, INC."</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">duration</span> := <span class="function">Range</span>(<span
+                            class="string">"May 2023"</span>, <span class="string">"May 2024"</span>)
+                    </div>
+                    <div class="comment">// 1 yr 1 mo</div>
+                    <div class="property">
+                        <span class="variable">location</span> := <span class="string">"Malmö, Sweden"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">type_</span> := <span class="variable">FullTime</span>
+                    </div>
+                    <div class="comment">/* ADAS Test Engineer with hands-on experience testing vehicles from Smart, MG,
+                        and XPENG. Validated advanced driver assistance systems through simulation and real-world
+                        vehicle testing. Skilled in test design, sensor validation, CAN data analysis, and defect
+                        tracking with strong focus on safety and quality. */</div>
+                </div>
+                <div class="closing-brace">}</div>
+
+
+                <div class="opening-brace">{</div>
+                <div class="method-body">
+                    <div class="property">
+                        <span class="variable">position</span> := <span class="string">"DevOps Engineer"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">company</span> := <span class="string">"Plejd AB"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">duration</span> := <span class="function">Range</span>(<span
+                            class="string">"Nov 2022"</span>, <span class="string">"Apr 2023"</span>)
+                    </div>
+                    <div class="comment">// 6 mos</div>
+                    <div class="property">
+                        <span class="variable">location</span> := <span class="string">"Gothenburg, Sweden"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">type_</span> := <span class="variable">Intern</span>
+                    </div>
+                    <div class="comment">/* Deployed and integrated vulnerability scanners within Kubernetes clusters
+                        using Kube-bench and Trivy-Operator. Translated scan results into actionable insights integrated
+                        into DefectDojo for comprehensive security assessments and vulnerability management. */</div>
+                </div>
+                <div class="closing-brace">}</div>
+
+
+                <div class="opening-brace">{</div>
+                <div class="method-body">
+                    <div class="property">
+                        <span class="variable">position</span> := <span class="string">"Salesforce Developer"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">company</span> := <span class="string">"Polytech Software Ltd"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">duration</span> := <span class="function">Range</span>(<span
+                            class="string">"Jun 2021"</span>, <span class="string">"Aug 2021"</span>)
+                    </div>
+                    <div class="comment">// 3 mos</div>
+                    <div class="property">
+                        <span class="variable">location</span> := <span class="string">"Kyiv, Ukraine"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">type_</span> := <span class="variable">Intern</span>
+                    </div>
+                    <div class="comment">/* Designed and developed customized solutions within Salesforce. Worked on
+                        full application lifecycle: planning, analysis, design, implementation, testing, deployment.
+                        Developed solutions using Apex, Triggers, Visualforce, Lightning Components. Designed automated
+                        processes using Process Builders and Workflows. */</div>
+                </div>
+                <div class="closing-brace">}</div>
+
+
+                <div class="opening-brace">{</div>
+                <div class="method-body">
+                    <div class="property">
+                        <span class="variable">position</span> := <span class="string">"Surveyor"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">company</span> := <span class="string">"Intertek Norway"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">duration</span> := <span class="function">Range</span>(<span
+                            class="string">"Apr 2015"</span>, <span class="string">"Aug 2018"</span>)
+                    </div>
+                    <div class="comment">// 3 yrs 5 mos</div>
+                    <div class="property">
+                        <span class="variable">location</span> := <span class="string">"Tønsberg, Norway"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">type_</span> := <span class="variable">FullTime</span>
+                    </div>
+                    <div class="comment">/* Cargo Surveyor (Oil & Bulk) with experience in inspection, measurement, and
+                        verification of oil and bulk cargoes. Skilled in quantity and quality inspections, sampling,
+                        tank gauging, and compliance with international standards. */</div>
+                </div>
+                <div class="closing-brace">}</div>
+
+
+                <div class="opening-brace">{</div>
+                <div class="method-body">
+                    <div class="property">
+                        <span class="variable">position</span> := <span class="string">"Surveyor"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">company</span> := <span class="string">"Intertek Denmark"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">duration</span> := <span class="function">Range</span>(<span
+                            class="string">"Dec 2010"</span>, <span class="string">"Apr 2015"</span>)
+                    </div>
+                    <div class="comment">// 4 yrs 5 mos</div>
+                    <div class="property">
+                        <span class="variable">location</span> := <span class="string">"Kalundborg, Denmark"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">type_</span> := <span class="variable">FullTime</span>
+                    </div>
+                    <div class="comment">/* Cargo Surveyor (Oil & Bulk). Ensured safe and accurate cargo operations
+                        through rigorous inspection and verification processes. */</div>
+                </div>
+                <div class="closing-brace">}</div>
+            </div>
+            <div class="closing-brace">}</div>
+        </div>
+
+        <div class="code-section">
+            <div class="class-declaration">
+                <span class="keyword">func</span> <span class="function">References</span>()
+            </div>
+            <div class="opening-brace">{</div>
+            <div class="class-body">
+                <div class="opening-brace">{</div>
+                <div class="method-body">
+                    <div class="property">
+                        <span class="variable">name</span> := <span class="string">"Brian Qvist Jacobsen"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">company</span> := <span class="string">"Intertek A/S"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">phone</span> := <span class="string">"+45-2399-8201"</span>
+                    </div>
+                    <div class="property">
+                        <span class="variable">email</span> := <span class="string">"Brian.Jacobsen@Intertek.com"</span>
+                    </div>
+                </div>
+                <div class="closing-brace">}</div>
+            </div>
+            <div class="closing-brace">}</div>
+        </div>
+    </div>
 </body>
 
 </html>

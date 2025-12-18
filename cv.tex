@@ -1,8 +1,6 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,11pt]{extarticle}
 
 % Packages
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{graphicx}
@@ -11,14 +9,33 @@
 \usepackage{fancyhdr}
 \usepackage{enumitem}
 \usepackage{multicol}
+\usepackage{paracol}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fontspec}
+\usepackage{setspace}
+\setstretch{1.25}
+
+% Font Configuration
+\setmainfont{JetBrainsMono-Regular.ttf}[
+    Path = ./,
+    BoldFont = JetBrainsMono-Bold.ttf,
+    ItalicFont = JetBrainsMono-Italic.ttf,
+    BoldItalicFont = JetBrainsMono-BoldItalic.ttf
+]
+\setmonofont{JetBrainsMono-Regular.ttf}[
+    Path = ./,
+    BoldFont = JetBrainsMono-Bold.ttf,
+    ItalicFont = JetBrainsMono-Italic.ttf,
+    BoldItalicFont = JetBrainsMono-BoldItalic.ttf
+]
+
 
 % Page setup
 \geometry{
-    left=0cm,
-    right=0cm,
-    top=0cm,
-    bottom=0cm,
+    left=1cm,
+    right=1cm,
+    top=1cm,
+    bottom=1cm,
     paperwidth=21cm,
     paperheight=29.7cm
 }
@@ -30,22 +47,31 @@
 \definecolor{sidebarbg}{RGB}{26,26,26}
 \definecolor{textcolor}{RGB}{212,212,212}
 \definecolor{commentcolor}{RGB}{106,153,85}
-\definecolor{keywordcolor}{RGB}{86,156,214}
-\definecolor{classcolor}{RGB}{78,201,176}
+\definecolor{keywordcolor}{RGB}{86,156,214}   % Blue for keywords (var, func)
+\definecolor{controlcolor}{RGB}{197,134,192}   % Purple for control
+\definecolor{classcolor}{RGB}{78,201,176}      % Teal for Types (string, bool)
 \definecolor{stringcolor}{RGB}{206,145,120}
-\definecolor{variablecolor}{RGB}{156,220,254}
-\definecolor{methodcolor}{RGB}{220,220,170}
+\definecolor{variablecolor}{RGB}{156,220,254}  % Light blue for variables
+\definecolor{methodcolor}{RGB}{220,220,170}    % Yellow for functions
 \definecolor{numbercolor}{RGB}{181,206,168}
 \definecolor{accentcolor}{RGB}{0,122,204}
 
+% Setting default font to typewriter
+% Setting default font to typewriter
+\renewcommand{\familydefault}{\ttdefault}
+\renewcommand{\rmdefault}{\ttdefault}
+\renewcommand{\sfdefault}{\ttdefault}
+\urlstyle{tt}
+
 % Custom commands
-\newcommand{\keyword}[1]{{\color{keywordcolor}\texttt{#1}}}
-\newcommand{\classname}[1]{{\color{classcolor}\texttt{#1}}}
-\newcommand{\stringval}[1]{{\color{stringcolor}\texttt{"#1"}}}
-\newcommand{\variable}[1]{{\color{variablecolor}\texttt{#1}}}
-\newcommand{\method}[1]{{\color{methodcolor}\texttt{#1}}}
-\newcommand{\comment}[1]{{\color{commentcolor}\texttt{#1}}}
-\newcommand{\numval}[1]{{\color{numbercolor}\texttt{#1}}}
+\newcommand{\keyword}[1]{{\color{keywordcolor}#1}}
+\newcommand{\control}[1]{{\color{controlcolor}#1}}
+\newcommand{\classname}[1]{{\color{classcolor}#1}}
+\newcommand{\stringval}[1]{{\color{stringcolor}"#1"}}
+\newcommand{\variable}[1]{{\color{variablecolor}#1}}
+\newcommand{\method}[1]{{\color{methodcolor}#1}}
+\newcommand{\comment}[1]{{\color{commentcolor}#1}}
+\newcommand{\numval}[1]{{\color{numbercolor}#1}}
 
 \begin{document}
 
@@ -53,232 +79,302 @@
 \pagecolor{darkbg}
 \color{textcolor}
 
-% Main container
-\begin{tikzpicture}[remember picture,overlay]
-    % Sidebar background
-    \fill[sidebarbg] (current page.north west) rectangle ([xshift=6cm]current page.south west);
-    
-    % Vertical separator line
-    \draw[color=gray!30, line width=0.5pt] ([xshift=6cm]current page.north west) -- ([xshift=6cm]current page.south west);
-\end{tikzpicture}
+% Paracol setup
+\setlength{\columnsep}{0.5cm}
+\columnratio{0.3} % Approx 30% left, 70% right
+\backgroundcolor{c[0]}{sidebarbg} % Sidebar background color
 
-\noindent
-\begin{minipage}[t]{5.8cm}
-\vspace{0.5cm}
+\begin{paracol}{2}
+
+% --- LEFT COLUMN ---
+\centering
+
+% Profile Image
+\texttt{\color{gray!70}<img>}
+\vspace{0.2cm}
+
+\includegraphics[width=4cm,height=4cm,keepaspectratio]{profile.jpg}
+\vspace{0.2cm}
+
+\texttt{\color{gray!70}</img>}
+
+\vspace{0.6cm}
 \raggedright
 
-% Profile Image Section
-\begin{center}
-\texttt{\color{gray!70}<img>}
-
-\vspace{0.3cm}
-\includegraphics[width=4.5cm,height=4.5cm,keepaspectratio]{profile.jpg}
-
-\vspace{0.3cm}
-\texttt{\color{gray!70}</img>}
-\end{center}
+% PLATFORMS
+{\keyword{var} \classname{Platforms} \texttt{=}}\\
+{\texttt{[]}\classname{string}}\\
+{\texttt{\{}}\\
+{\hspace{0.5cm}\stringval{Windows}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Linux}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Cloud}\texttt{,}}\\
+{\texttt{\}}}
 
 \vspace{0.5cm}
 
-% PLATEFORMES
-{\small\keyword{public enum} \classname{PLATEFORMES}\texttt{()}}
-
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\texttt{Windows,}\\
-\hspace{0.5cm}\texttt{Linux,}\\
-\hspace{0.5cm}\texttt{Mobile}
-}
-
-\vspace{0.5cm}
-
-% LANGAGES
-{\small\keyword{public enum} \classname{LANGAGES}\texttt{()}}
-
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\texttt{C\#, C++, C,}\\
-\hspace{0.5cm}\texttt{Python, Bash, LUA,}\\
-\hspace{0.5cm}\texttt{Java, HTML5, CSS,}\\
-\hspace{0.5cm}\texttt{JavaScript}
-}
+% PROGRAMMING
+{\keyword{var} \classname{Programming} \texttt{=}}\\
+{\texttt{[]}\classname{string}}\\
+{\texttt{\{}}\\
+{\hspace{0.5cm}\stringval{C\#}\texttt{,} \stringval{C++}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{C}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Python}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Bash}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Golang}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Java}\texttt{,} \stringval{HTML5}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{CSS}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{JavaScript}\texttt{,}}\\
+{\texttt{\}}}
 
 \vspace{0.5cm}
 
-% LOGICIELS
-{\small\keyword{public enum} \classname{LOGICIELS}\texttt{()}}
-
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\texttt{Unity3D,}\\
-\hspace{0.5cm}\texttt{UnrealEngine,}\\
-\hspace{0.5cm}\texttt{Godot4, VisualStudio,}\\
-\hspace{0.5cm}\texttt{Jetbrains, PhotoShop,}\\
-\hspace{0.5cm}\texttt{GoogleSuite, Blender,}\\
-\hspace{0.5cm}\texttt{AdobePremier,}\\
-\hspace{0.5cm}\texttt{AdobeSubstancePainter,}\\
-\hspace{0.5cm}\texttt{AdobeSubstance3D}
-}
+% SOFTWARE
+{\keyword{var} \classname{Software} \texttt{=}}\\
+{\texttt{[]}\classname{string}}\\
+{\texttt{\{}}\\
+{\hspace{0.5cm}\stringval{BurpSuite}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Metasploit}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Nmap}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Wireshark}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Nessus}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Hashcat}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{SQLMap}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Hydra}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Aircrack-ng}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{OWASP\_ZAP}\texttt{,}}\\
+{\texttt{\}}}
 
 \vspace{0.5cm}
 
 % MEDIA
-{\small\keyword{public enum} \classname{MEDIA}\texttt{()}}
-
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\texttt{itch.io,}\\
-\hspace{0.5cm}\texttt{\color{stringcolor}itch.io/yourprofile}\\
-\hspace{0.5cm}\texttt{LinkedIn,}\\
-\hspace{0.5cm}\texttt{\color{stringcolor}/in/yourprofile}\\
-\hspace{0.5cm}\texttt{GitHub}\\
-\hspace{0.5cm}\texttt{\color{stringcolor}github.com/YourName}
-}
-
-\vspace{0.5cm}
-
-% LANGUES
-{\small\keyword{public enum} \classname{LANGUES}\texttt{()}}
-
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\comment{// Native}\\
-\hspace{0.5cm}\texttt{FRANCAIS = C1,}\\
-\hspace{0.5cm}\comment{// Fluent}\\
-\hspace{0.5cm}\texttt{ANGLAIS = B2,}\\
-\hspace{0.5cm}\comment{// Intermediate}\\
-\hspace{0.5cm}\texttt{POLONAIS = B2,}
-}
+{\keyword{var} \variable{Media} \texttt{=}}\\
+{\keyword{map}\texttt{[}\keyword{string}\texttt{]}\keyword{string}}\\
+{\texttt{\{}}\\
+{\hspace{0.5cm}\stringval{LinkedIn}\texttt{:}}\\
+{\hspace{0.5cm}\stringval{www.linkedin.co}}\\
+{\hspace{0.5cm}\stringval{m/in/noah-h-liu-}}\\
+{\hspace{0.5cm}\stringval{2066b846/}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{GitHub}\texttt{:}}\\
+{\hspace{0.5cm}\stringval{github.com/su2700}\texttt{,}}\\
+{\texttt{\}}}
 
 \vspace{0.5cm}
 
-% PROFIL
-{\small\keyword{public enum} \classname{PROFIL}\texttt{()}}
+% LANGUAGES
+{\keyword{var} \variable{Languages} \texttt{=}}\\
+{\keyword{map}\texttt{[}\keyword{string}\texttt{]}\keyword{string}}\\
+{\texttt{\{}}\\
+{\hspace{0.5cm}\stringval{English}\texttt{:} \stringval{C1}\texttt{,}}\\
+{\hspace{0.5cm}\comment{// Fluent}}\\
+{\hspace{0.5cm}\stringval{Swedish}\texttt{:} \stringval{B2}\texttt{,}}\\
+{\hspace{0.5cm}\comment{// Intermediate}}\\
+{\hspace{0.5cm}\stringval{Chinese}\texttt{:} \stringval{C2}\texttt{,}}\\
+{\hspace{0.5cm}\comment{// Native}}\\
+{\texttt{\}}}
 
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\texttt{CURIEUX,}\\
-\hspace{0.5cm}\texttt{PONCTUEL,}\\
-\hspace{0.5cm}\texttt{RIGOUREUX,}\\
-\hspace{0.5cm}\texttt{METICULEUX,}\\
-\hspace{0.5cm}\texttt{EMPHATIQUE,}\\
-\hspace{0.5cm}\texttt{SOCIAL}
-}
-
-\end{minipage}%
-\hspace{0.5cm}%
-\begin{minipage}[t]{14cm}
 \vspace{0.5cm}
+
+% PROFILE
+{\keyword{var} \variable{Profile} \texttt{=}}\\
+{\texttt{[]}\keyword{string}}\\
+{\texttt{\{}}\\
+{\hspace{0.5cm}\stringval{CTF}}\\
+{\hspace{0.5cm}\stringval{Competitor}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Sports}}\\
+{\hspace{0.5cm}\stringval{Enthusiast}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Music}}\\
+{\hspace{0.5cm}\stringval{Aficionado}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Culinary}}\\
+{\hspace{0.5cm}\stringval{Explorer}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Animal}}\\
+{\hspace{0.5cm}\stringval{Lover}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Family}}\\
+{\hspace{0.5cm}\stringval{Oriented}}\\
+{\texttt{\}}}
+
+\switchcolumn
+
+% --- RIGHT COLUMN ---
 \raggedright
 
-% Summary Comment
-{\small
-\comment{/// <summary>}\\
-\comment{/// Recherche une alternance en programmation C\# sur Unity3D}\\
-\comment{/// ou en C++ sur Unreal Engine. Pour une durée de 2 ans}\\
-\comment{/// à jours entreprise, 1 jour école. Disponible IMMÉDIATEMENT.}\\
-\comment{/// </summary>}
+% Header Style
+{\control{package} \variable{main}}\\
+{\control{import} \stringval{fmt}}
+
+\vspace{0.5cm}
+
+
+
+% Info Struct
+{\keyword{var} \classname{Info} \texttt{=} \keyword{struct} \texttt{\{} \variable{Name}\texttt{,} \variable{Email}\texttt{,} \variable{Phone} \classname{string}}\\
+{\variable{Location} \texttt{[]}\classname{string} \variable{DrivingLicense} \classname{bool} \texttt{\}}}\\
+\texttt{\{}\\
+\vspace{0.1cm}
+{
+\hspace*{0.5cm}\variable{Name}\texttt{:} \stringval{Noah H.Liu}\texttt{,}\\
+\hspace{0.5cm}\variable{Email}\texttt{:} \stringval{noah.h.liu@gmail.com}\texttt{,}\\
+\hspace{0.5cm}\variable{Phone}\texttt{:} \stringval{+46-7655-24558}\texttt{,}\\
+\hspace{0.5cm}\variable{Location}\texttt{:} \texttt{[]}\classname{string}\texttt{\{}\stringval{Malmö}\texttt{,} \stringval{Sweden}\texttt{\},}\\
+\hspace{0.5cm}\variable{DrivingLicense}\texttt{:} \keyword{true}\texttt{,}\\
+\texttt{\}}
 }
 
 \vspace{0.5cm}
 
-% INFORMATION Class
-{\small\keyword{public class} \classname{INFORMATION}}
-
-\vspace{0.2cm}
-{\small\texttt{\{}}
-
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\keyword{public string} \variable{NOM} \texttt{=} \stringval{YOUR NAME}\texttt{;}\\
-\hspace{0.5cm}\keyword{public string} \variable{TITRE} \texttt{=} \stringval{Game Programmer}\texttt{;}\\
-\hspace{0.5cm}\keyword{public string} \variable{EMAIL} \texttt{=} \stringval{your.email@gmail.com}\texttt{;}\\
-\hspace{0.5cm}\keyword{public string} \variable{TELEPHONE} \texttt{=} \stringval{07 83 34 80 10}\texttt{;}\\
-\hspace{0.5cm}\keyword{public string[]} \variable{POSITION} \texttt{= \{}\stringval{Your-City}\texttt{,} \stringval{77380}\texttt{,}\\
-\hspace{1.5cm}\stringval{Your-Region}\texttt{,} \stringval{Country}\texttt{\};}\\
-\hspace{0.5cm}\keyword{public bool} \variable{PERMIS\_B\_VÉHICULE} \texttt{=} \keyword{true}\texttt{;}\\
-\hspace{0.5cm}\keyword{public int} \variable{ÂGE} \texttt{=} \numval{21}\texttt{;}
+% Education Function
+{\keyword{func} \method{Education}\texttt{()}}\\
+{\texttt{\{}}\\
+\vspace{0.1cm}
+{
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\variable{university} \texttt{:=} \stringval{National Technical University of}\\
+\hspace{1cm}\phantom{\variable{university} \texttt{:=} }\stringval{Ukraine}\\
+\hspace{1cm}\variable{field} \texttt{:=} \stringval{Information Systems and Cyber Security}\\
+\hspace{1cm}\variable{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{2018}\texttt{,} \stringval{2022}\texttt{)}\\
+\hspace{0.5cm}\texttt{\}}\\
 }
-
-\vspace{0.2cm}
-{\small\texttt{\}}}
+{\texttt{\}}}
 
 \vspace{0.5cm}
 
-% FORMATIONS Class
-{\small\keyword{public partial class} \classname{FORMATIONS} \texttt{:} \classname{ÉcolesSupérieures}}
-
-\vspace{0.2cm}
-{\small\texttt{\{}}
-
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\keyword{private void} \method{YnovConnect}\texttt{()}\\
+% Certifications Function
+{\keyword{func} \method{Certifications}\texttt{()}}\\
+{\texttt{\{}}\\
+\vspace{0.1cm}
+{
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{var} \variable{\_Niveau} \texttt{=} \classname{Mastère}\texttt{;} \comment{// Pour une durée de 2 ans}\\
-\hspace{1cm}\keyword{var} \variable{\_Date} \texttt{=} \classname{Aujourd'hui}\texttt{;}\\
-\hspace{1cm}\keyword{var} \variable{\_Type} \texttt{=} \classname{Game}\texttt{.}\method{Programmer}\texttt{();}\\
-\hspace{0.5cm}\texttt{\}}
+\hspace{1cm}\stringval{OffSec Certified Professional+ (OSCP+)}\\
+\hspace{1cm}\comment{// Issued: Dec 2025}\\
+\hspace{1cm}\stringval{Microsoft Certified: Azure Fundamentals}\\
+\hspace{1cm}\comment{// Issued: Oct 2022}\\
+\hspace{1cm}\stringval{Certified Kubernetes Administrator (CKA)}\\
+\hspace{1cm}\comment{// Issued: May 2022}\\
+\hspace{0.5cm}\texttt{\}}\\
 }
-
-\vspace{0.3cm}
-{\footnotesize
-\hspace{0.5cm}\keyword{private void} \method{ICAN}\texttt{(}\keyword{string}\texttt{[]} \variable{\_Diplômes}\texttt{)}\\
-\hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{var} \variable{\_Niveau} \texttt{=} \classname{Bachelor}\texttt{;}\\
-\hspace{1cm}\keyword{var} \variable{\_Date} \texttt{=} \method{Range}\texttt{(}\keyword{début}\texttt{:} \stringval{Octobre 2021}\texttt{,} \keyword{fin}\texttt{:} \stringval{Juin 2024}\texttt{);}\\
-\hspace{1cm}\keyword{var} \variable{\_Type} \texttt{=} \classname{Game}\texttt{.}\method{Design}\texttt{();}\\
-\hspace{1cm}\variable{\_Diplômes} \texttt{= \{}\stringval{Game Design}\texttt{,} \stringval{Designer Numérique}\texttt{\};}\\
-\hspace{1cm}\keyword{var} \variable{\_Obtention} \texttt{=} \stringval{Samedi 24 Juin 2024}\texttt{;}\\
-\hspace{0.5cm}\texttt{\}}
-}
-
-\vspace{0.2cm}
-{\small\texttt{\}}}
+{\texttt{\}}}
 
 \vspace{0.5cm}
 
-% EXPERIENCES Class
-{\small\keyword{public static class} \classname{EXPERIENCES}}
+% Experiences Function
+{\control{func} \method{Experiences}\texttt{()}}\\
+{\texttt{\{}}\\
 
-\vspace{0.2cm}
-{\small\texttt{\{}}
-
-\vspace{0.2cm}
-{\footnotesize
-\hspace{0.5cm}\keyword{public void} \method{StudioPREMA}\texttt{()}\\
+\vspace{0.1cm}
+{
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{var} \variable{\_Durée} \texttt{=} \method{Range}\texttt{(}\keyword{début}\texttt{:} \stringval{Septembre 2024}\texttt{,} \keyword{fin}\texttt{:} \stringval{Novembre 2024}\texttt{);}\\
-\hspace{1cm}\keyword{var} \variable{\_Lien} \texttt{=} \stringval{https://aftv.accor.com/fr/studio-prema.html}\texttt{;}\\
-\hspace{1cm}\keyword{var} \variable{\_Type} \texttt{=} \keyword{new} \classname{Stage}\texttt{;}\\
-\hspace{1cm}\comment{/*StudioPREMA est un petit studio de jeux vidéos PC fondé par}\\
-\hspace{1cm}\comment{Steven BERDIN et Théo DIEU pour projet EKILA...*/}\\
-\hspace{0.5cm}\texttt{\}}
+\hspace{1cm}\keyword{position} \texttt{:=} \stringval{Software Test Engineer (ADAS)}\\
+\hspace{1cm}\keyword{company} \texttt{:=} \stringval{ARC AUTOMOTIVE, INC.}\\
+\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{May 2023}\texttt{,} \stringval{May 2024}\texttt{)}\\
+\hspace{1cm}\comment{// 1 yr 1 mo}\\
+\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Malmö, Sweden}\\
+\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{FullTime}\\
+\hspace{1cm}\comment{/* ADAS Test Engineer with hands-on experience}\\
+\hspace{1cm}\comment{testing vehicles from Smart, MG, and XPENG.}\\
+\hspace{1cm}\comment{Validated advanced driver assistance systems}\\
+\hspace{1cm}\comment{through simulation and real-world vehicle}\\
+\hspace{1cm}\comment{testing. Skilled in test design, sensor}\\
+\hspace{1cm}\comment{validation, CAN data analysis, and defect}\\
+\hspace{1cm}\comment{tracking with strong focus on safety and quality. */}\\
+\hspace{0.5cm}\texttt{\}}\\
 }
 
-\vspace{0.3cm}
-{\footnotesize
-\hspace{0.5cm}\keyword{public void} \method{LeDouzième}\texttt{()}\\
+\vspace{0.4cm}
+{
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{var} \variable{\_Type} \texttt{=} \keyword{new} \classname{Association}\texttt{;}\\
-\hspace{1cm}\comment{/*Le Douzième est une association que j'ai fondé...*/}\\
-\hspace{0.5cm}\texttt{\}}
+\hspace{1cm}\keyword{position} \texttt{:=} \stringval{DevOps Engineer}\\
+\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Plejd AB}\\
+\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{Nov 2022}\texttt{,} \stringval{Apr 2023}\texttt{)}\\
+\hspace{1cm}\comment{// 6 mos}\\
+\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Gothenburg, Sweden}\\
+\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{Intern}\\
+\hspace{1cm}\comment{/* Deployed and integrated vulnerability scanners}\\
+\hspace{1cm}\comment{within Kubernetes clusters using Kube-bench and}\\
+\hspace{1cm}\comment{Trivy-Operator. Translated scan results into}\\
+\hspace{1cm}\comment{actionable insights integrated into DefectDojo}\\
+\hspace{1cm}\comment{for comprehensive security assessments and}\\
+\hspace{1cm}\comment{vulnerability management. */}\\
+\hspace{0.5cm}\texttt{\}}\\
 }
 
-\vspace{0.2cm}
-{\small\texttt{\}}}
+\vspace{0.4cm}
+{
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\keyword{position} \texttt{:=} \stringval{Salesforce Developer}\\
+\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Polytech Software Ltd}\\
+\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{Jun 2021}\texttt{,} \stringval{Aug 2021}\texttt{)}\\
+\hspace{1cm}\comment{// 3 mos}\\
+\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Kyiv, Ukraine}\\
+\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{Intern}\\
+\hspace{1cm}\comment{/* Designed and developed customized solutions}\\
+\hspace{1cm}\comment{within Salesforce. Worked on full application}\\
+\hspace{1cm}\comment{lifecycle: planning, analysis, design,}\\
+\hspace{1cm}\comment{implementation, testing, deployment. Developed}\\
+\hspace{1cm}\comment{solutions using Apex, Triggers, Visualforce,}\\
+\hspace{1cm}\comment{Lightning Components. Designed automated}\\
+\hspace{1cm}\comment{processes using Process Builders and Workflows. */}\\
+\hspace{0.5cm}\texttt{\}}\\
+}
 
-\end{minipage}
+\vspace{0.4cm}
+{
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\keyword{position} \texttt{:=} \stringval{Surveyor}\\
+\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Intertek Norway}\\
+\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{Apr 2015}\texttt{,} \stringval{Aug 2018}\texttt{)}\\
+\hspace{1cm}\comment{// 3 yrs 5 mos}\\
+\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Tønsberg, Norway}\\
+\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{FullTime}\\
+\hspace{1cm}\comment{/* Cargo Surveyor (Oil \& Bulk) with experience in}\\
+\hspace{1cm}\comment{inspection, measurement, and verification of oil}\\
+\hspace{1cm}\comment{and bulk cargoes. Skilled in quantity and quality}\\
+\hspace{1cm}\comment{inspections, sampling, tank gauging, and}\\
+\hspace{1cm}\comment{compliance with international standards. */}\\
+\hspace{0.5cm}\texttt{\}}\\
+}
 
-% Like button in bottom right
-\begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=south east] at ([xshift=-1.5cm,yshift=1.5cm]current page.south east) {
-        \begin{tikzpicture}
-            \draw[accentcolor, line width=2pt, rounded corners=20pt] (0,0) rectangle (2,2.5);
-            \node at (1,1.7) {\includegraphics[width=1.2cm]{thumbs-up.png}};
-            \node[color=textcolor, font=\Large\bfseries] at (1,0.5) {1.7K};
-        \end{tikzpicture}
-    };
-\end{tikzpicture}
+\vspace{0.4cm}
+{
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\keyword{position} \texttt{:=} \stringval{Surveyor}\\
+\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Intertek Denmark}\\
+\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{Dec 2010}\texttt{,} \stringval{Apr 2015}\texttt{)}\\
+\hspace{1cm}\comment{// 4 yrs 5 mos}\\
+\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Kalundborg, Denmark}\\
+\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{FullTime}\\
+\hspace{1cm}\comment{/* Cargo Surveyor (Oil \& Bulk). Ensured safe and}\\
+\hspace{1cm}\comment{accurate cargo operations through rigorous}\\
+\hspace{1cm}\comment{inspection and verification processes. */}\\
+\hspace{0.5cm}\texttt{\}}\\
+}
+
+{\texttt{\}}}
+\vspace{0.5cm}
+
+% References Function
+{\control{func} \method{References}\texttt{()}}\\
+{\texttt{\{}}\\
+\vspace{0.1cm}
+{
+\hspace{0.5cm}\texttt{\{}\\
+\hspace{1cm}\keyword{name} \texttt{:=} \stringval{Brian Qvist Jacobsen}\\
+\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Intertek A/S}\\
+\hspace{1cm}\keyword{phone} \texttt{:=} \stringval{+45-2399-8201}\\
+\hspace{1cm}\keyword{email} \texttt{:=} \stringval{Brian.Jacobsen@Intertek.com}\\
+\hspace{0.5cm}\texttt{\}}\\
+}
+{\texttt{\}}}
+
+\end{paracol}
+
+% Like button (Optional, absolute)
+% \begin{tikzpicture}[remember picture,overlay]
+%     \node[anchor=south east] at ([xshift=-1.5cm,yshift=1.5cm]current page.south east) {
+%         \begin{tikzpicture}
+%             \draw[accentcolor, line width=2pt, rounded corners=20pt] (0,0) rectangle (2,2.5);
+%             \node at (1,1.7) {\includegraphics[width=1.2cm]{thumbs-up.png}};
+%             \node[color=textcolor, font=\Large\bfseries] at (1,0.5) {1.7K};
+%         \end{tikzpicture}
+%     };
+% \end{tikzpicture}
 
 \end{document}

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Your Name | Developer</title>
-    <meta name="description" content="Interactive code-themed CV showcasing development skills and experience">
+    <title>CV - Noah H.Liu | Pentester</title>
+    <meta name="description" content="Interactive code-themed CV showcasing security skills and experience">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <!-- Left Sidebar -->
@@ -24,71 +27,112 @@
 
             <div class="sidebar-content">
                 <div class="enum-section">
-                    <span class="keyword">public enum</span> <span class="class-name">PLATEFORMES</span><span class="punctuation">()</span>
+                    <span class="keyword">var</span> <span class="variable">Platforms</span> = <span
+                        class="keyword">[]string</span>
                     <div class="enum-items">
-                        <div class="enum-item">Windows,</div>
-                        <div class="enum-item">Linux,</div>
-                        <div class="enum-item">Mobile</div>
+                        <div class="enum-item">{</div>
+                        <div class="enum-item"><span class="string">"Windows"</span>,</div>
+                        <div class="enum-item"><span class="string">"Linux"</span>,</div>
+                        <div class="enum-item"><span class="string">"Cloud"</span></div>
+                        <div class="enum-item">}</div>
                     </div>
                 </div>
 
                 <div class="enum-section">
-                    <span class="keyword">public enum</span> <span class="class-name">LANGAGES</span><span class="punctuation">()</span>
+                    <span class="keyword">var</span> <span class="variable">Programming</span> = <span
+                        class="keyword">[]string</span>
                     <div class="enum-items">
-                        <div class="enum-item">C#, C++, C,</div>
-                        <div class="enum-item">Python, Bash, LUA,</div>
-                        <div class="enum-item">Java, HTML5, CSS,</div>
-                        <div class="enum-item">JavaScript</div>
+                        <div class="enum-item">{</div>
+                        <div class="enum-item"><span class="string">"C#"</span>, <span class="string">"C++"</span>,
+                            <span class="string">"C"</span>,
+                        </div>
+                        <div class="enum-item"><span class="string">"Python"</span>, <span class="string">"Bash"</span>,
+                        </div>
+                        <div class="enum-item"><span class="string">"Golang"</span>,</div>
+                        <div class="enum-item"><span class="string">"Java"</span>, <span class="string">"HTML5"</span>,
+                        </div>
+                        <div class="enum-item"><span class="string">"CSS"</span>, <span
+                                class="string">"JavaScript"</span></div>
+                        <div class="enum-item">}</div>
                     </div>
                 </div>
 
                 <div class="enum-section">
-                    <span class="keyword">public enum</span> <span class="class-name">LOGICIELS</span><span class="punctuation">()</span>
+                    <span class="keyword">var</span> <span class="variable">Software</span> = <span
+                        class="keyword">[]string</span>
                     <div class="enum-items">
-                        <div class="enum-item">Unity3D,</div>
-                        <div class="enum-item">UnrealEngine,</div>
-                        <div class="enum-item">Godot4, VisualStudio,</div>
-                        <div class="enum-item">Jetbrains, PhotoShop,</div>
-                        <div class="enum-item">GoogleSuite, Blender,</div>
-                        <div class="enum-item">AdobePremier,</div>
-                        <div class="enum-item">AdobeSubstancePainter,</div>
-                        <div class="enum-item">AdobeSubstance3D</div>
+                        <div class="enum-item">{</div>
+                        <div class="enum-item"><span class="string">"BurpSuite"</span>,</div>
+                        <div class="enum-item"><span class="string">"Metasploit"</span>,</div>
+                        <div class="enum-item"><span class="string">"Nmap"</span>, <span
+                                class="string">"Wireshark"</span>,</div>
+                        <div class="enum-item"><span class="string">"Nessus"</span>, <span
+                                class="string">"Hashcat"</span>,</div>
+                        <div class="enum-item"><span class="string">"SQLMap"</span>, <span
+                                class="string">"Hydra"</span>,</div>
+                        <div class="enum-item"><span class="string">"Aircrack-ng"</span>,</div>
+                        <div class="enum-item"><span class="string">"OWASP_ZAP"</span></div>
+                        <div class="enum-item">}</div>
                     </div>
                 </div>
 
                 <div class="enum-section">
-                    <span class="keyword">public enum</span> <span class="class-name">MEDIA</span><span class="punctuation">()</span>
+                    <span class="keyword">var</span> <span class="variable">Media</span> =
+                    <br>
+                    <span class="keyword">map</span>[<span class="keyword">string</span>]<span
+                        class="keyword">string</span>
                     <div class="enum-items">
-                        <div class="enum-item">itch.io,</div>
-                        <div class="enum-item link-item"><a href="https://itch.io" target="_blank">itch.io/</a></div>
-                        <div class="enum-item">LinkedIn,</div>
-                        <div class="enum-item link-item"><a href="#" target="_blank">/in/yourprofile</a></div>
-                        <div class="enum-item">GitHub</div>
-                        <div class="enum-item link-item"><a href="#" target="_blank">github.com/YourName</a></div>
+                        <div class="enum-item">{</div>
+                        <div class="enum-item"><span class="string">"LinkedIn"</span>:</div>
+                        <div class="enum-item link-item"><a href="https://www.linkedin.com/in/noah-h-liu-2066b846/"
+                                target="_blank"><span
+                                    class="string">"www.linkedin.co<br>m/in/noah-h-liu-<br>2066b846/"</span></a>,</div>
+                        <div class="enum-item"><span class="string">"GitHub"</span>:</div>
+                        <div class="enum-item link-item"><a href="https://github.com/su2700" target="_blank"><span
+                                    class="string">"github.com/su2700"</span></a>,</div>
+                        <div class="enum-item">}</div>
                     </div>
                 </div>
 
                 <div class="enum-section">
-                    <span class="keyword">public enum</span> <span class="class-name">LANGUES</span><span class="punctuation">()</span>
+                    <span class="keyword">var</span> <span class="variable">Languages</span> =
+                    <br>
+                    <span class="keyword">map</span>[<span class="keyword">string</span>]<span
+                        class="keyword">string</span>
                     <div class="enum-items">
-                        <div class="enum-item comment">// Native</div>
-                        <div class="enum-item">FRANCAIS = C1,</div>
+                        <div class="enum-item">{</div>
+                        <div class="enum-item"><span class="string">"English"</span>: <span class="string">"C1"</span>,
+                        </div>
                         <div class="enum-item comment">// Fluent</div>
-                        <div class="enum-item">ANGLAIS = B2,</div>
+                        <div class="enum-item"><span class="string">"Swedish"</span>: <span class="string">"B2"</span>,
+                        </div>
                         <div class="enum-item comment">// Intermediate</div>
-                        <div class="enum-item">POLONAIS = B2,</div>
+                        <div class="enum-item"><span class="string">"Chinese"</span>: <span class="string">"C2"</span>,
+                        </div>
+                        <div class="enum-item comment">// Native</div>
+                        <div class="enum-item">}</div>
                     </div>
                 </div>
 
                 <div class="enum-section">
-                    <span class="keyword">public enum</span> <span class="class-name">PROFIL</span><span class="punctuation">()</span>
+                    <span class="keyword">var</span> <span class="variable">Profile</span> =
+                    <br>
+                    []<span class="keyword">string</span>
                     <div class="enum-items">
-                        <div class="enum-item">CURIEUX,</div>
-                        <div class="enum-item">PONCTUEL,</div>
-                        <div class="enum-item">RIGOUREUX,</div>
-                        <div class="enum-item">METICULEUX,</div>
-                        <div class="enum-item">EMPHATIQUE,</div>
-                        <div class="enum-item">SOCIAL</div>
+                        <div class="enum-item">{</div>
+                        <div class="enum-item"><span class="string">"CTF</span></div>
+                        <div class="enum-item"><span class="string">Competitor"</span>,</div>
+                        <div class="enum-item"><span class="string">"Sports</span></div>
+                        <div class="enum-item"><span class="string">Enthusiast"</span>,</div>
+                        <div class="enum-item"><span class="string">"Music</span></div>
+                        <div class="enum-item"><span class="string">Aficionado"</span>,</div>
+                        <div class="enum-item"><span class="string">"Culinary</span></div>
+                        <div class="enum-item"><span class="string">Explorer"</span>,</div>
+                        <div class="enum-item"><span class="string">"Animal</span></div>
+                        <div class="enum-item"><span class="string">Lover"</span>,</div>
+                        <div class="enum-item"><span class="string">"Family</span></div>
+                        <div class="enum-item"><span class="string">Oriented"</span></div>
+                        <div class="enum-item">}</div>
                     </div>
                 </div>
             </div>
@@ -96,153 +140,303 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Summary Section -->
+            <!-- Header -->
             <section class="code-section">
-                <div class="comment-block">
-                    <div class="comment">/// &lt;summary&gt;</div>
-                    <div class="comment">/// Recherche une alternance en programmation C# sur Unity3D</div>
-                    <div class="comment">/// ou en C++ sur Unreal Engine. Pour une durée de 2 ans</div>
-                    <div class="comment">/// à jours entreprise, 1 jour école. Disponible IMMÉDIATEMENT.</div>
-                    <div class="comment">/// &lt;/summary&gt;</div>
+                <div class="package-decl">
+                    <span class="keyword">package</span> <span class="variable">main</span>
+                </div>
+                <div class="import-decl">
+                    <span class="keyword">import</span> <span class="string">"fmt"</span>
                 </div>
             </section>
 
-            <!-- Information Class -->
+
+
+            <!-- Information Struct -->
             <section class="code-section">
                 <div class="class-declaration">
-                    <span class="keyword">public class</span> <span class="class-name">INFORMATION</span>
+                    <span class="keyword">var</span> <span class="class-name">Info</span> = <span
+                        class="keyword">struct</span> {
                 </div>
                 <div class="class-body">
                     <div class="property">
-                        <span class="keyword">public string</span> <span class="variable">NOM</span> = <span class="string">"YOUR NAME"</span>;
+                        <span class="variable">Name</span>, <span class="variable">Email</span>, <span
+                            class="variable">Phone</span> <span class="keyword">string</span>
                     </div>
                     <div class="property">
-                        <span class="keyword">public string</span> <span class="variable">TITRE</span> = <span class="string">"Game Programmer"</span>;
+                        <span class="variable">Location</span> <span class="keyword">[]string</span>
                     </div>
                     <div class="property">
-                        <span class="keyword">public string</span> <span class="variable">EMAIL</span> = <span class="string">"your.email@gmail.com"</span>;
+                        <span class="variable">DrivingLicense</span> <span class="keyword">bool</span>
+                    </div>
+                </div>
+                <div class="struct-init">
+                    } {
+                </div>
+                <div class="class-body">
+                    <div class="property">
+                        <span class="variable">Name</span>: <span class="string">"Noah H.Liu"</span>,
                     </div>
                     <div class="property">
-                        <span class="keyword">public string</span> <span class="variable">TELEPHONE</span> = <span class="string">07 83 34 80 10</span>;
+                        <span class="variable">Email</span>: <span class="string">"noah.h.liu@gmail.com"</span>,
                     </div>
                     <div class="property">
-                        <span class="keyword">public string[]</span> <span class="variable">POSITION</span> = {<span class="string">"Your-City"</span>, <span class="string">"77380"</span>, <span class="string">"Your-Region"</span>, <span class="string">"Country"</span>};
+                        <span class="variable">Phone</span>: <span class="string">"+46-7655-24558"</span>,
                     </div>
                     <div class="property">
-                        <span class="keyword">public bool</span> <span class="variable">PERMIS_B_VÉHICULE</span> = <span class="keyword">true</span>;
+                        <span class="variable">Location</span>: <span class="keyword">[]string</span>{<span
+                            class="string">"Malmö"</span>, <span class="string">"Sweden"</span>},
                     </div>
                     <div class="property">
-                        <span class="keyword">public int</span> <span class="variable">ÂGE</span> = <span class="number">21</span>;
+                        <span class="variable">DrivingLicense</span>: <span class="keyword">true</span>,
                     </div>
                 </div>
                 <div class="closing-brace">}</div>
             </section>
 
-            <!-- Formations Class -->
+            <!-- Education Function -->
             <section class="code-section">
-                <div class="class-declaration">
-                    <span class="keyword">public partial class</span> <span class="class-name">FORMATIONS</span> : <span class="class-name">ÉcolesSupérieures</span>
+                <div class="method-declaration">
+                    <span class="keyword">func</span> <span class="method-name">Education</span>()
                 </div>
-                <div class="class-body">
-                    <div class="method-declaration">
-                        <span class="keyword">private void</span> <span class="method-name">YnovConnect</span>()
-                    </div>
-                    <div class="method-body">
+                <div class="method-body">
+                    <div class="block-start">{</div>
+                    <div class="inner-block">
                         <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Niveau</span> = <span class="class-name">Mastère</span>; <span class="comment">// Pour une durée de 2 ans</span>
+                            <span class="variable">university</span> := <span class="string">"National Technical
+                                University of Ukraine"</span>
                         </div>
                         <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Date</span> = <span class="class-name">Aujourd'hui</span>;
+                            <span class="variable">field</span> := <span class="string">"Information Systems and Cyber
+                                Security"</span>
                         </div>
                         <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Type</span> = <span class="class-name">Game</span>.<span class="method-name">Programmer</span>();
-                        </div>
-                    </div>
-                    <div class="closing-brace">}</div>
-
-                    <div class="method-declaration">
-                        <span class="keyword">private void</span> <span class="method-name">ICAN</span>(<span class="keyword">string</span>[] <span class="variable">_Diplômes</span>)
-                    </div>
-                    <div class="method-body">
-                        <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Niveau</span> = <span class="class-name">Bachelor</span>;
-                        </div>
-                        <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Date</span> = <span class="method-name">Range</span>(<span class="keyword">début</span>: <span class="string">Octobre 2021</span>, <span class="keyword">fin</span>: <span class="string">Juin 2024</span>);
-                        </div>
-                        <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Type</span> = <span class="class-name">Game</span>.<span class="method-name">Design</span>();
-                        </div>
-                        <div class="property">
-                            <span class="variable">_Diplômes</span> = {<span class="string">"Game Design"</span>, <span class="string">"Designer Numérique"</span>};
-                        </div>
-                        <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Obtention</span> = <span class="string">"Samedi 24 Juin 2024"</span>;
+                            <span class="variable">duration</span> := <span class="method-name">Range</span>(<span
+                                class="string">"2018"</span>, <span class="string">"2022"</span>)
                         </div>
                     </div>
-                    <div class="closing-brace">}</div>
+                    <div class="block-end">}</div>
                 </div>
-                <div class="closing-brace">}</div>
             </section>
 
-            <!-- Experiences Class -->
+            <!-- Certifications Function -->
             <section class="code-section">
-                <div class="class-declaration">
-                    <span class="keyword">public static class</span> <span class="class-name">EXPERIENCES</span>
+                <div class="method-declaration">
+                    <span class="keyword">func</span> <span class="method-name">Certifications</span>()
                 </div>
-                <div class="class-body">
-                    <div class="method-declaration">
-                        <span class="keyword">public void</span> <span class="method-name">StudioPREMA</span>()
+                <div class="method-body">
+                    <div class="block-start">{</div>
+                    <div class="inner-block">
+                        <div class="property">
+                            <span class="string">"OffSec Certified Professional+ (OSCP+)"</span>
+                        </div>
+                        <div class="comment">// Issued: Dec 2025</div>
+                        <div class="property">
+                            <span class="string">"Microsoft Certified: Azure Fundamentals"</span>
+                        </div>
+                        <div class="comment">// Issued: Oct 2022</div>
+                        <div class="property">
+                            <span class="string">"Certified Kubernetes Administrator (CKA)"</span>
+                        </div>
+                        <div class="comment">// Issued: May 2022</div>
+                        <div class="property">
+                            <span class="string">"AWS Certified DevOps Engineer – Professional"</span>
+                        </div>
+                        <div class="comment">// Issued: Aug 2022</div>
                     </div>
-                    <div class="method-body">
+                    <div class="block-end">}</div>
+                </div>
+            </section>
+
+            <!-- Experiences Function -->
+            <section class="code-section">
+                <div class="method-declaration">
+                    <span class="keyword">func</span> <span class="method-name">Experiences</span>()
+                </div>
+                <div class="method-body">
+                    <div class="block-start">{</div>
+
+                    <!-- ARC -->
+                    <div class="inner-block experience-block">
                         <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Durée</span> = <span class="method-name">Range</span>(<span class="keyword">début</span>: <span class="string">Septembre 2024</span>, <span class="keyword">fin</span>: <span class="string">Novembre 2024</span>);
+                            <span class="variable">position</span> := <span class="string">"Software Test Engineer
+                                (ADAS)"</span>
                         </div>
                         <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Lien</span> = <span class="string">"https://aftv.accor.com/fr/studio-prema.html"</span>;
+                            <span class="variable">company</span> := <span class="string">"ARC AUTOMOTIVE, INC."</span>
                         </div>
                         <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Type</span> = <span class="keyword">new</span> <span class="class-name">Stage</span>;
+                            <span class="variable">duration</span> := <span class="method-name">Range</span>(<span
+                                class="string">"May 2023"</span>, <span class="string">"May 2024"</span>)
+                        </div>
+                        <div class="comment">// 1 yr 1 mo</div>
+                        <div class="property">
+                            <span class="variable">location</span> := <span class="string">"Malmö, Sweden"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">type_</span> := <span class="variable">FullTime</span>
                         </div>
                         <div class="comment-block">
-                            <div class="comment">/*StudioPREMA est un petit studio de jeux vidéos PC fondé par</div>
-                            <div class="comment">Steven BERDIN et Théo DIEU pour projet EKILA. Projet collectif inspiré de</div>
-                            <div class="comment">League of Legends et Dota2, fait sous Unity 6. Durant ce stage, j'étais</div>
-                            <div class="comment">dans une équipe de développeur mes missions étaient de créer les</div>
-                            <div class="comment">compétences des personnages, créer les systèmes de jeu comme les 3D,</div>
-                            <div class="comment">animations et VFX en collaboration avec les Game Artistes.*/</div>
+                            <div class="comment">/* ADAS Test Engineer with hands-on experience</div>
+                            <div class="comment">testing vehicles from Smart, MG, and XPENG.</div>
+                            <div class="comment">Validated advanced driver assistance systems</div>
+                            <div class="comment">through simulation and real-world vehicle</div>
+                            <div class="comment">testing. Skilled in test design, sensor</div>
+                            <div class="comment">validation, CAN data analysis, and defect</div>
+                            <div class="comment">tracking with strong focus on safety and quality. */</div>
                         </div>
                     </div>
-                    <div class="closing-brace">}</div>
 
-                    <div class="method-declaration">
-                        <span class="keyword">public void</span> <span class="method-name">LeDouzième</span>()
-                    </div>
-                    <div class="method-body">
+                    <!-- Plejd -->
+                    <div class="inner-block experience-block">
                         <div class="property">
-                            <span class="keyword">var</span> <span class="variable">_Type</span> = <span class="keyword">new</span> <span class="class-name">Association</span>;
+                            <span class="variable">position</span> := <span class="string">"DevOps Engineer"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">company</span> := <span class="string">"Plejd AB"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">duration</span> := <span class="method-name">Range</span>(<span
+                                class="string">"Nov 2022"</span>, <span class="string">"Apr 2023"</span>)
+                        </div>
+                        <div class="comment">// 6 mos</div>
+                        <div class="property">
+                            <span class="variable">location</span> := <span class="string">"Gothenburg, Sweden"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">type_</span> := <span class="variable">Intern</span>
                         </div>
                         <div class="comment-block">
-                            <div class="comment">/*Le Douzième est une association que j'ai fondé avec des amis dans</div>
-                            <div class="comment">laquelle on a comme projet de créer des jeux vidéos PC de plusieurs</div>
-                            <div class="comment">genres et qui nous font plaisir. Notre premier projet est un survival qui</div>
-                            <div class="comment">s'appelle Outpost, fait sous Unreal Engine 5. Nous sommes une équipe qui</div>
-                            <div class="comment">élite ppge avec de la coop. On est une toute petite équipe de 4 personnes</div>
-                            <div class="comment">et nous travaillons sur notre temps libre afin de survivre et un jour de</div>
-                            <div class="comment">ambition de transformer notre association en entreprise/studio afin de</div>
-                            <div class="comment">survivre est un secteur qui nous tient à coeur.*/</div>
+                            <div class="comment">/* Deployed and integrated vulnerability scanners</div>
+                            <div class="comment">within Kubernetes clusters using Kube-bench and</div>
+                            <div class="comment">Trivy-Operator. Translated scan results into</div>
+                            <div class="comment">actionable insights integrated into DefectDojo</div>
+                            <div class="comment">for comprehensive security assessments and</div>
+                            <div class="comment">vulnerability management. */</div>
                         </div>
                     </div>
-                    <div class="closing-brace">}</div>
+
+                    <!-- Polytech -->
+                    <div class="inner-block experience-block">
+                        <div class="property">
+                            <span class="variable">position</span> := <span class="string">"Salesforce Developer"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">company</span> := <span class="string">"Polytech Software Ltd"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">duration</span> := <span class="method-name">Range</span>(<span
+                                class="string">"Jun 2021"</span>, <span class="string">"Aug 2021"</span>)
+                        </div>
+                        <div class="comment">// 3 mos</div>
+                        <div class="property">
+                            <span class="variable">location</span> := <span class="string">"Kyiv, Ukraine"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">type_</span> := <span class="variable">Intern</span>
+                        </div>
+                        <div class="comment-block">
+                            <div class="comment">/* Designed and developed customized solutions</div>
+                            <div class="comment">within Salesforce. Worked on full application</div>
+                            <div class="comment">lifecycle: planning, analysis, design,</div>
+                            <div class="comment">implementation, testing, deployment. Developed</div>
+                            <div class="comment">solutions using Apex, Triggers, Visualforce,</div>
+                            <div class="comment">Lightning Components. Designed automated</div>
+                            <div class="comment">processes using Process Builders and Workflows. */</div>
+                        </div>
+                    </div>
+
+                    <!-- Intertek -->
+                    <div class="inner-block experience-block">
+                        <div class="property">
+                            <span class="variable">position</span> := <span class="string">"Surveyor"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">company</span> := <span class="string">"Intertek Norway"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">duration</span> := <span class="method-name">Range</span>(<span
+                                class="string">"Apr 2015"</span>, <span class="string">"Aug 2018"</span>)
+                        </div>
+                        <div class="comment">// 3 yrs 5 mos</div>
+                        <div class="property">
+                            <span class="variable">location</span> := <span class="string">"Tønsberg, Norway"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">type_</span> := <span class="variable">FullTime</span>
+                        </div>
+                        <div class="comment-block">
+                            <div class="comment">/* Cargo Surveyor (Oil & Bulk) with experience in</div>
+                            <div class="comment">inspection, measurement, and verification of oil</div>
+                            <div class="comment">and bulk cargoes. Skilled in quantity and quality</div>
+                            <div class="comment">inspections, sampling, tank gauging, and</div>
+                            <div class="comment">compliance with international standards. */</div>
+                        </div>
+                    </div>
+
+                    <!-- Intertek Denmark -->
+                    <div class="inner-block experience-block">
+                        <div class="property">
+                            <span class="variable">position</span> := <span class="string">"Surveyor"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">company</span> := <span class="string">"Intertek Denmark"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">duration</span> := <span class="method-name">Range</span>(<span
+                                class="string">"Dec 2010"</span>, <span class="string">"Apr 2015"</span>)
+                        </div>
+                        <div class="comment">// 4 yrs 5 mos</div>
+                        <div class="property">
+                            <span class="variable">location</span> := <span class="string">"Kalundborg, Denmark"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">type_</span> := <span class="variable">FullTime</span>
+                        </div>
+                        <div class="comment-block">
+                            <div class="comment">/* Cargo Surveyor (Oil & Bulk). Ensured safe and</div>
+                            <div class="comment">accurate cargo operations through rigorous</div>
+                            <div class="comment">inspection and verification processes. */</div>
+                        </div>
+                    </div>
+
+                    <div class="block-end">}</div>
                 </div>
-                <div class="closing-brace">}</div>
+            </section>
+
+            <!-- References Function -->
+            <section class="code-section">
+                <div class="method-declaration">
+                    <span class="keyword">func</span> <span class="method-name">References</span>()
+                </div>
+                <div class="method-body">
+                    <div class="block-start">{</div>
+                    <div class="inner-block">
+                        <div class="property">
+                            <span class="variable">name</span> := <span class="string">"Brian Qvist Jacobsen"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">company</span> := <span class="string">"Intertek A/S"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">phone</span> := <span class="string">"+45-2399-8201"</span>
+                        </div>
+                        <div class="property">
+                            <span class="variable">email</span> := <span
+                                class="string">"Brian.Jacobsen@Intertek.com"</span>
+                        </div>
+                    </div>
+                    <div class="block-end">}</div>
+                </div>
             </section>
 
             <!-- Like Button -->
             <div class="like-section">
                 <button class="like-button" id="likeBtn">
                     <svg class="hand-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 22V11M2 13V20C2 21.1046 2.89543 22 4 22H17.4262C18.907 22 20.1662 20.9197 20.3914 19.4562L21.4683 12.4562C21.7479 10.6389 20.3418 9 18.5032 9H15V4C15 2.89543 14.1046 2 13 2C12.4477 2 12 2.44772 12 3V3.93551C12 4.68374 11.7111 5.40473 11.1954 5.94888L7.73485 9.64132C7.26281 10.1388 7 10.7981 7 11.4839V11.4839" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                            d="M7 22V11M2 13V20C2 21.1046 2.89543 22 4 22H17.4262C18.907 22 20.1662 20.9197 20.3914 19.4562L21.4683 12.4562C21.7479 10.6389 20.3418 9 18.5032 9H15V4C15 2.89543 14.1046 2 13 2C12.4477 2 12 2.44772 12 3V3.93551C12 4.68374 11.7111 5.40473 11.1954 5.94888L7.73485 9.64132C7.26281 10.1388 7 10.7981 7 11.4839V11.4839"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <span class="like-count" id="likeCount">1.7K</span>
                 </button>
@@ -252,4 +446,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
