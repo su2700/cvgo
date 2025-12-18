@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025/Debian)  (format=lualatex 2025.10.8)  18 DEC 2025 20:00
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025/Debian)  (format=lualatex 2025.10.8)  18 DEC 2025 20:26
  restricted system commands enabled.
-**cv.tex
-(./cv.tex
+**sv-cv.tex
+(./sv-cv.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -764,8 +764,8 @@ anguage=dflt;"
 (fontspec)             <->"[./JetBrainsMono-BoldItalic.ttf]:mode=node;script=la
 tn;language=dflt;"
 
- (./cv.aux)
-\openout1 = cv.aux
+ (./SV-CV.aux)
+\openout1 = SV-CV.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
@@ -847,10 +847,10 @@ e
 \c@lstlisting=\count366
 Package hyperref Info: Link coloring OFF on input line 81.
 
-(./cv.out) (./cv.out)
+(./SV-CV.out) (./SV-CV.out)
 \@outlinefile=\write4
 
-\openout4 = cv.out
+\openout4 = SV-CV.out
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -928,28 +928,216 @@ Package luatex.def Info: profile.jpg  used on input line 101.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./profile.jpg>] [2]
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-[3] (./cv.aux)
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{paracol}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+
+[3] (./SV-CV.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
-Package rerunfilecheck Info: File `cv.out' has not changed.
+Package rerunfilecheck Info: File `SV-CV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 24888 strings out of 476291
+ 24889 strings out of 476291
  100000,953878 words of node,token memory allocated
  5538 words of node memory still in use:
    3 hlist, 4 vlist, 1 rule, 458 glue, 3 kern, 1 glyph, 465 attribute, 60 glue_s
 pec, 465 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 2:1797,3:592,4:710,5:348,6:271,7:5928,9:656,10:9,11:18
+   avail lists: 2:1827,3:587,4:703,5:360,6:270,7:5869,9:656,10:9,11:27
  46584 multiletter control sequences out of 65536+600000
  24 fonts using 3103247 bytes
- 84i,7n,92p,403b,662s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,7n,92p,406b,1002s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <./JetBrainsMono-Regular.ttf>
-Output written on cv.pdf (3 pages, 39712 bytes).
+Output written on SV-CV.pdf (3 pages, 39931 bytes).
 
 PDF statistics: 36 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream

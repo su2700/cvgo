@@ -15,6 +15,11 @@
 \usepackage{setspace}
 \setstretch{1.25}
 
+% Custom command for dotted vertical line (indent guide) - 1st level
+\newcommand{\dottedbar}{{\tiny\textcolor{gray!0.5}{\scalebox{0.3}[5]{┆}}}}
+% Custom command for dotted vertical line (indent guide) - 2nd level
+\newcommand{\dottedbarinner}{{\tiny\textcolor{gray!0.5}{\scalebox{0.3}[5]{┆}}}}
+
 % Font Configuration
 \setmainfont{JetBrainsMono-Regular.ttf}[
     Path = ./,
@@ -150,12 +155,8 @@
 {\keyword{var} \variable{Media} \texttt{=}}\\
 {\keyword{map}\texttt{[}\keyword{string}\texttt{]}\keyword{string}}\\
 {\texttt{\{}}\\
-{\hspace{0.5cm}\stringval{LinkedIn}\texttt{:}}\\
-{\hspace{0.5cm}\stringval{www.linkedin.co}}\\
-{\hspace{0.5cm}\stringval{m/in/noah-h-liu-}}\\
-{\hspace{0.5cm}\stringval{2066b846/}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{GitHub}\texttt{:}}\\
-{\hspace{0.5cm}\stringval{github.com/su2700}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{LinkedIn}\texttt{:} \href{https://www.linkedin.com/in/noah-h-liu-2066b846/}{\stringval{linkedin.com/in/noah-h-liu-2066b846}}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{GitHub}\texttt{:} \href{https://github.com/su2700}{\stringval{github.com/su2700}}\texttt{,}}\\
 {\texttt{\}}}
 
 \vspace{0.5cm}
@@ -206,12 +207,12 @@
 
 
 % Info Struct
-{\keyword{var} \classname{Info} \texttt{=} \keyword{struct} \texttt{\{} \variable{Name}\texttt{,} \variable{Email}\texttt{,} \variable{Phone} \classname{string}}\\
+{\keyword{var} \classname{Info} \texttt{=} \keyword{struct} \texttt{\{}\variable{Name}\texttt{,} \variable{Email}\texttt{,} \variable{Phone} \classname{string}}\\
 {\variable{Location} \texttt{[]}\classname{string} \variable{DrivingLicense} \classname{bool} \texttt{\}}}\\
 \texttt{\{}\\
 \vspace{0.1cm}
 {
-\hspace*{0.5cm}\variable{Name}\texttt{:} \stringval{Noah H.Liu}\texttt{,}\\
+\hspace{0.5cm}\variable{Name}\texttt{:} \stringval{Noah H.Liu}\texttt{,}\\
 \hspace{0.5cm}\variable{Email}\texttt{:} \stringval{noah.h.liu@gmail.com}\texttt{,}\\
 \hspace{0.5cm}\variable{Phone}\texttt{:} \stringval{+46-7655-24558}\texttt{,}\\
 \hspace{0.5cm}\variable{Location}\texttt{:} \texttt{[]}\classname{string}\texttt{\{}\stringval{Malmö}\texttt{,} \stringval{Sweden}\texttt{\},}\\
@@ -237,8 +238,8 @@
 
 \vspace{0.5cm}
 
-% Certifications Function
-{\keyword{func} \method{Certifications}\texttt{()}}\\
+% Certifications Variable
+{\keyword{var} \variable{Certifications} \texttt{=} \texttt{[]}\classname{string}}\\
 {\texttt{\{}}\\
 \vspace{0.1cm}
 {
@@ -247,6 +248,8 @@
 \hspace{1cm}\comment{// Issued: Dec 2025}\\
 \hspace{1cm}\stringval{Microsoft Certified: Azure Fundamentals}\\
 \hspace{1cm}\comment{// Issued: Oct 2022}\\
+\hspace{1cm}\stringval{AWS Certified DevOps Engineer – Professional}\\
+\hspace{1cm}\comment{// Issued: Aug 2022}\\
 \hspace{1cm}\stringval{Certified Kubernetes Administrator (CKA)}\\
 \hspace{1cm}\comment{// Issued: May 2022}\\
 \hspace{0.5cm}\texttt{\}}\\
@@ -255,38 +258,38 @@
 
 \vspace{0.5cm}
 
-% Experiences Function
-{\control{func} \method{Experiences}\texttt{()}}\\
+% Experiences Variable
+{\keyword{var} \variable{Experiences} \texttt{=} \texttt{[]}\keyword{struct}}\\
 {\texttt{\{}}\\
 
 \vspace{0.1cm}
 {
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{position} \texttt{:=} \stringval{Software Test Engineer (ADAS)}\\
-\hspace{1cm}\keyword{company} \texttt{:=} \stringval{ARC AUTOMOTIVE, INC.}\\
-\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{May 2023}\texttt{,} \stringval{May 2024}\texttt{)}\\
+\hspace{1cm}\variable{position}\texttt{:} \stringval{Software Test Engineer}\texttt{,}\\
+\hspace{1cm}\variable{company}\texttt{:} \stringval{ARC AUTOMOTIVE, INC.}\texttt{,}\\
+\hspace{1cm}\variable{duration}\texttt{:} \method{Range}\texttt{(}\stringval{May 2023}\texttt{,} \stringval{May 2024}\texttt{),}\\
 \hspace{1cm}\comment{// 1 yr 1 mo}\\
-\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Malmö, Sweden}\\
-\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{FullTime}\\
+\hspace{1cm}\variable{location}\texttt{:} \stringval{Malmö, Sweden}\texttt{,}\\
+\hspace{1cm}\variable{type}\texttt{:} \variable{FullTime}\texttt{,}\\
 \hspace{1cm}\comment{/* ADAS Test Engineer with hands-on experience}\\
 \hspace{1cm}\comment{testing vehicles from Smart, MG, and XPENG.}\\
 \hspace{1cm}\comment{Validated advanced driver assistance systems}\\
 \hspace{1cm}\comment{through simulation and real-world vehicle}\\
-\hspace{1cm}\comment{testing. Skilled in test design, sensor}\\
-\hspace{1cm}\comment{validation, CAN data analysis, and defect}\\
-\hspace{1cm}\comment{tracking with strong focus on safety and quality. */}\\
+\hspace{1cm}\comment{testing. Skilled in test design, sensor validation,}\\
+\hspace{1cm}\comment{CAN data analysis, and defect tracking with strong}\\
+\hspace{1cm}\comment{focus on safety and quality. */}\\
 \hspace{0.5cm}\texttt{\}}\\
 }
 
 \vspace{0.4cm}
 {
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{position} \texttt{:=} \stringval{DevOps Engineer}\\
-\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Plejd AB}\\
-\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{Nov 2022}\texttt{,} \stringval{Apr 2023}\texttt{)}\\
+\hspace{1cm}\variable{position}\texttt{:} \stringval{DevOps Engineer}\texttt{,}\\
+\hspace{1cm}\variable{company}\texttt{:} \stringval{Plejd AB}\texttt{,}\\
+\hspace{1cm}\variable{duration}\texttt{:} \method{Range}\texttt{(}\stringval{Nov 2022}\texttt{,} \stringval{Apr 2023}\texttt{),}\\
 \hspace{1cm}\comment{// 6 mos}\\
-\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Gothenburg, Sweden}\\
-\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{Intern}\\
+\hspace{1cm}\variable{location}\texttt{:} \stringval{Gothenburg, Sweden}\texttt{,}\\
+\hspace{1cm}\variable{type}\texttt{:} \variable{Intern}\texttt{,}\\
 \hspace{1cm}\comment{/* Deployed and integrated vulnerability scanners}\\
 \hspace{1cm}\comment{within Kubernetes clusters using Kube-bench and}\\
 \hspace{1cm}\comment{Trivy-Operator. Translated scan results into}\\
@@ -299,12 +302,12 @@
 \vspace{0.4cm}
 {
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{position} \texttt{:=} \stringval{Salesforce Developer}\\
-\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Polytech Software Ltd}\\
-\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{Jun 2021}\texttt{,} \stringval{Aug 2021}\texttt{)}\\
+\hspace{1cm}\variable{position}\texttt{:} \stringval{Salesforce Developer}\texttt{,}\\
+\hspace{1cm}\variable{company}\texttt{:} \stringval{Polytech Software Ltd}\texttt{,}\\
+\hspace{1cm}\variable{duration}\texttt{:} \method{Range}\texttt{(}\stringval{Jun 2021}\texttt{,} \stringval{Aug 2021}\texttt{),}\\
 \hspace{1cm}\comment{// 3 mos}\\
-\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Kyiv, Ukraine}\\
-\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{Intern}\\
+\hspace{1cm}\variable{location}\texttt{:} \stringval{Kyiv, Ukraine}\texttt{,}\\
+\hspace{1cm}\variable{type}\texttt{:} \variable{Intern}\texttt{,}\\
 \hspace{1cm}\comment{/* Designed and developed customized solutions}\\
 \hspace{1cm}\comment{within Salesforce. Worked on full application}\\
 \hspace{1cm}\comment{lifecycle: planning, analysis, design,}\\
@@ -318,12 +321,12 @@
 \vspace{0.4cm}
 {
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{position} \texttt{:=} \stringval{Surveyor}\\
-\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Intertek Norway}\\
-\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{Apr 2015}\texttt{,} \stringval{Aug 2018}\texttt{)}\\
+\hspace{1cm}\variable{position}\texttt{:} \stringval{Surveyor}\texttt{,}\\
+\hspace{1cm}\variable{company}\texttt{:} \stringval{Intertek Norway}\texttt{,}\\
+\hspace{1cm}\variable{duration}\texttt{:} \method{Range}\texttt{(}\stringval{Apr 2015}\texttt{,} \stringval{Aug 2018}\texttt{),}\\
 \hspace{1cm}\comment{// 3 yrs 5 mos}\\
-\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Tønsberg, Norway}\\
-\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{FullTime}\\
+\hspace{1cm}\variable{location}\texttt{:} \stringval{Tønsberg, Norway}\texttt{,}\\
+\hspace{1cm}\variable{type}\texttt{:} \variable{FullTime}\texttt{,}\\
 \hspace{1cm}\comment{/* Cargo Surveyor (Oil \& Bulk) with experience in}\\
 \hspace{1cm}\comment{inspection, measurement, and verification of oil}\\
 \hspace{1cm}\comment{and bulk cargoes. Skilled in quantity and quality}\\
@@ -335,12 +338,12 @@
 \vspace{0.4cm}
 {
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{position} \texttt{:=} \stringval{Surveyor}\\
-\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Intertek Denmark}\\
-\hspace{1cm}\keyword{duration} \texttt{:=} \method{Range}\texttt{(}\stringval{Dec 2010}\texttt{,} \stringval{Apr 2015}\texttt{)}\\
+\hspace{1cm}\variable{position}\texttt{:} \stringval{Surveyor}\texttt{,}\\
+\hspace{1cm}\variable{company}\texttt{:} \stringval{Intertek Denmark}\texttt{,}\\
+\hspace{1cm}\variable{duration}\texttt{:} \method{Range}\texttt{(}\stringval{Dec 2010}\texttt{,} \stringval{Apr 2015}\texttt{),}\\
 \hspace{1cm}\comment{// 4 yrs 5 mos}\\
-\hspace{1cm}\keyword{location} \texttt{:=} \stringval{Kalundborg, Denmark}\\
-\hspace{1cm}\keyword{type\_} \texttt{:=} \variable{FullTime}\\
+\hspace{1cm}\variable{location}\texttt{:} \stringval{Kalundborg, Denmark}\texttt{,}\\
+\hspace{1cm}\variable{type}\texttt{:} \variable{FullTime}\texttt{,}\\
 \hspace{1cm}\comment{/* Cargo Surveyor (Oil \& Bulk). Ensured safe and}\\
 \hspace{1cm}\comment{accurate cargo operations through rigorous}\\
 \hspace{1cm}\comment{inspection and verification processes. */}\\
@@ -350,16 +353,16 @@
 {\texttt{\}}}
 \vspace{0.5cm}
 
-% References Function
-{\control{func} \method{References}\texttt{()}}\\
+% References Variable
+{\keyword{var} \variable{References} \texttt{=} \keyword{struct}}\\
 {\texttt{\{}}\\
 \vspace{0.1cm}
 {
 \hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\keyword{name} \texttt{:=} \stringval{Brian Qvist Jacobsen}\\
-\hspace{1cm}\keyword{company} \texttt{:=} \stringval{Intertek A/S}\\
-\hspace{1cm}\keyword{phone} \texttt{:=} \stringval{+45-2399-8201}\\
-\hspace{1cm}\keyword{email} \texttt{:=} \stringval{Brian.Jacobsen@Intertek.com}\\
+\hspace{1cm}\variable{name}\texttt{:} \stringval{Brian Qvist Jacobsen}\texttt{,}\\
+\hspace{1cm}\variable{company}\texttt{:} \stringval{Intertek A/S}\texttt{,}\\
+\hspace{1cm}\variable{phone}\texttt{:} \stringval{+45-2399-8201}\texttt{,}\\
+\hspace{1cm}\variable{email}\texttt{:} \stringval{Brian.Jacobsen@Intertek.com}\texttt{,}\\
 \hspace{0.5cm}\texttt{\}}\\
 }
 {\texttt{\}}}
