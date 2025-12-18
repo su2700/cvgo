@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025/Debian)  (format=lualatex 2025.10.8)  18 DEC 2025 21:09
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025/Debian)  (format=lualatex 2025.10.8)  18 DEC 2025 21:10
  restricted system commands enabled.
-**sv-cv.tex
-(./sv-cv.tex
+**cv.tex
+(./cv.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -764,9 +764,10 @@ anguage=dflt;"
 (fontspec)             <->"[./JetBrainsMono-BoldItalic.ttf]:mode=node;script=la
 tn;language=dflt;"
 
- (./SV-CV.aux)
-\openout1 = SV-CV.aux
 
+No file EN-CV.aux.
+
+\openout1 = EN-CV.aux
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
@@ -787,7 +788,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 *geometry* verbose mode - [ preamble ] result:
@@ -846,11 +846,9 @@ e
 ))
 \c@lstlisting=\count366
 Package hyperref Info: Link coloring OFF on input line 81.
-
-(./SV-CV.out) (./SV-CV.out)
 \@outlinefile=\write4
 
-\openout4 = SV-CV.out
+\openout4 = EN-CV.out
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -925,87 +923,39 @@ File: profile.jpg Graphic file (type jpg)
 <use profile.jpg>
 Package luatex.def Info: profile.jpg  used on input line 101.
 (luatex.def)             Requested size: 113.80771pt x 113.80771pt.
- [1
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./profile.jpg>] [2]
-! Missing } inserted.
-<inserted text> 
-                }
-l.370 \end{paracol}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.370 \end{paracol}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.370 \end{paracol}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.370 \end{paracol}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.370 \end{paracol}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-
-[3] (./SV-CV.aux)
+[3] (./EN-CV.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
-Package rerunfilecheck Info: File `SV-CV.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+Package rerunfilecheck Warning: File `EN-CV.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `EN-CV.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 24889 strings out of 476291
+ 24872 strings out of 476291
  100000,953878 words of node,token memory allocated
  5538 words of node memory still in use:
    3 hlist, 4 vlist, 1 rule, 458 glue, 3 kern, 1 glyph, 465 attribute, 60 glue_s
 pec, 465 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 2:1787,3:592,4:710,5:356,6:271,7:5967,9:656,10:8,11:28
- 46584 multiletter control sequences out of 65536+600000
+   avail lists: 2:1797,3:592,4:710,5:348,6:271,7:5928,9:656,10:9,11:18
+ 46582 multiletter control sequences out of 65536+600000
  24 fonts using 3103247 bytes
- 84i,7n,92p,406b,776s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,7n,92p,403b,662s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <./JetBrainsMono-Regular.ttf>
-Output written on SV-CV.pdf (3 pages, 51416 bytes).
+Output written on EN-CV.pdf (3 pages, 51196 bytes).
 
 PDF statistics: 37 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream
