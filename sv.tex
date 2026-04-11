@@ -137,16 +137,11 @@
 {\keyword{var} \classname{Programvara} \texttt{=}}\\
 {\texttt{[]}\classname{string}}\\
 {\texttt{\{}}\\
-{\hspace{0.5cm}\stringval{BurpSuite}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{Metasploit}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{Nmap}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{Wireshark}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{Nessus}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{Hashcat}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{SQLMap}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{Hydra}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{Aircrack-ng}\texttt{,}}\\
-{\hspace{0.5cm}\stringval{OWASP\_ZAP}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Kubernetes}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{EKS}\texttt{,} \stringval{ECR}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Terraform}\texttt{,} \stringval{Helm}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{EC2 \& VPC}\texttt{,} \stringval{IAM}\texttt{,}}\\
+{\hspace{0.5cm}\stringval{Docker}\texttt{,} \stringval{Linux}\texttt{,}}\\
 {\texttt{\}}}
 
 \vspace{0.5cm}
@@ -179,18 +174,18 @@
 {\keyword{var} \variable{Profil} \texttt{=}}\\
 {\texttt{[]}\keyword{string}}\\
 {\texttt{\{}}\\
-{\hspace{0.5cm}\stringval{CTF}}\\
-{\hspace{0.5cm}\stringval{Tävlande}\texttt{,}\\
-{\hspace{0.5cm}\stringval{Sport}}\\
-{\hspace{0.5cm}\stringval{Entusiast}\texttt{,}\\
-{\hspace{0.5cm}\stringval{Musik}}\\
-{\hspace{0.5cm}\stringval{Älskare}\texttt{,}\\
-{\hspace{0.5cm}\stringval{Kulinarisk}}\\
-{\hspace{0.5cm}\stringval{Upptäcktsresande}\texttt{,}\\
-{\hspace{0.5cm}\stringval{Djur}}\\
-{\hspace{0.5cm}\stringval{Vän}\texttt{,}\\
-{\hspace{0.5cm}\stringval{Familje}}\\
-{\hspace{0.5cm}\stringval{Orienterad}}\\
+{\hspace{0.5cm}\stringval{CTF}}\\%
+{\hspace{0.5cm}\stringval{Tävlande}\texttt{,}}\\%
+{\hspace{0.5cm}\stringval{Sport}}\\%
+{\hspace{0.5cm}\stringval{Entusiast}\texttt{,}}\\%
+{\hspace{0.5cm}\stringval{Musik}}\\%
+{\hspace{0.5cm}\stringval{Älskare}\texttt{,}}\\%
+{\hspace{0.5cm}\stringval{Kulinarisk}}\\%
+{\hspace{0.5cm}\stringval{Upptäcktsresande}\texttt{,}}\\%
+{\hspace{0.5cm}\stringval{Djur}}\\%
+{\hspace{0.5cm}\stringval{Vän}\texttt{,}}\\%
+{\hspace{0.5cm}\stringval{Familje}}\\%
+{\hspace{0.5cm}\stringval{Orienterad}}\\%
 {\texttt{\}}}
 
 \switchcolumn
@@ -271,7 +266,10 @@
 \hspace{1cm}\comment{// Nuvarande}\\
 \hspace{1cm}\variable{plats}\texttt{:} \stringval{Malmö, Sverige}\texttt{,}\\
 \hspace{1cm}\variable{typ}\texttt{:} \variable{Praktikant}\texttt{,}\\
-\hspace{1cm}\comment{/* Utvecklade och underhöll kärnproduktfunktioner. */}\\
+\hspace{1cm}\comment{/* Chrome-tillägg: Utvecklar och underhåller webbläsarverktyg med Manifest V3.}\\
+\hspace{1cm}\comment{AI-integration: Implementerar AI-drivna funktioner för att automatisera och förbättra användarflöden.}\\
+\hspace{1cm}\comment{Molninfrastruktur: Bygger skalbara backends med Google Cloud och Firebase.}\\
+\hspace{1cm}\comment{Fullstack-utveckling: Levererar helhetslösningar från användargränssnitt till serverlös logik. */}\\
 \hspace{0.5cm}\texttt{\}}\\
 }
 
@@ -335,31 +333,16 @@
 {
 \hspace{0.5cm}\texttt{\{}\\
 \hspace{1cm}\variable{befattning}\texttt{:} \stringval{Inspektör}\texttt{,}\\
-\hspace{1cm}\variable{företag}\texttt{:} \stringval{Intertek Norway}\texttt{,}\\
-\hspace{1cm}\variable{varaktighet}\texttt{:} \method{Range}\texttt{(}\stringval{apr 2015}\texttt{,} \stringval{aug 2018}\texttt{),}\\
-\hspace{1cm}\comment{// 3 år 5 mån}\\
-\hspace{1cm}\variable{plats}\texttt{:} \stringval{Tønsberg, Norge}\texttt{,}\\
+\hspace{1cm}\variable{företag}\texttt{:} \stringval{Intertek Danmark/Norge}\texttt{,}\\
+\hspace{1cm}\variable{varaktighet}\texttt{:} \method{Range}\texttt{(}\stringval{dec 2010}\texttt{,} \stringval{aug 2018}\texttt{),}\\
+\hspace{1cm}\comment{// 7 år 9 mån}\\
+\hspace{1cm}\variable{plats}\texttt{:} \stringval{Kalundborg/Tønsberg}\texttt{,}\\
 \hspace{1cm}\variable{typ}\texttt{:} \variable{Heltid}\texttt{,}\\
 \hspace{1cm}\comment{/* Lastinspektör (Olja \& Bulk) med erfarenhet av}\\
 \hspace{1cm}\comment{inspektion, mätning och verifiering av olje och}\\
 \hspace{1cm}\comment{bulklaster. Skicklig i kvantitets och}\\
 \hspace{1cm}\comment{kvalitetsinspektioner, provtagning, tankmätning och}\\
 \hspace{1cm}\comment{efterlevnad av internationella standarder. */}\\
-\hspace{0.5cm}\texttt{\}}\\
-}
-
-\vspace{0.4cm}
-{
-\hspace{0.5cm}\texttt{\{}\\
-\hspace{1cm}\variable{befattning}\texttt{:} \stringval{Inspektör}\texttt{,}\\
-\hspace{1cm}\variable{företag}\texttt{:} \stringval{Intertek Danmark}\texttt{,}\\
-\hspace{1cm}\variable{varaktighet}\texttt{:} \method{Range}\texttt{(}\stringval{dec 2010}\texttt{,} \stringval{apr 2015}\texttt{),}\\
-\hspace{1cm}\comment{// 4 år 5 mån}\\
-\hspace{1cm}\variable{plats}\texttt{:} \stringval{Kalundborg, Danmark}\texttt{,}\\
-\hspace{1cm}\variable{typ}\texttt{:} \variable{Heltid}\texttt{,}\\
-\hspace{1cm}\comment{/* Lastinspektör (Olja \& Bulk). Säkerställde säkra och}\\
-\hspace{1cm}\comment{noggranna lastoperationer genom rigorösa}\\
-\hspace{1cm}\comment{inspektions och verifieringsprocesser. */}\\
 \hspace{0.5cm}\texttt{\}}\\
 }
 
