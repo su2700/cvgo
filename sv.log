@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025/Debian)  (format=lualatex 2026.3.9)  9 APR 2026 21:16
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025/Debian)  (format=lualatex 2026.3.9)  13 APR 2026 21:43
  restricted system commands enabled.
 **sv.tex
 (./sv.tex
@@ -949,15 +949,15 @@ Here is how much of LuaTeX's memory you used:
  5538 words of node memory still in use:
    3 hlist, 4 vlist, 1 rule, 458 glue, 3 kern, 1 glyph, 465 attribute, 60 glue_s
 pec, 465 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 2:1731,3:593,4:729,5:355,6:263,7:6029,9:689,10:8,11:34
+   avail lists: 2:1749,3:593,4:718,5:353,6:261,7:6009,9:644,10:8,11:32
  46785 multiletter control sequences out of 65536+600000
  24 fonts using 3103247 bytes
  84i,6n,92p,403b,670s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <./JetBrainsMono-Regular.ttf>
-Output written on sv.pdf (3 pages, 52552 bytes).
+Output written on sv.pdf (3 pages, 51699 bytes).
 
-PDF statistics: 80 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+PDF statistics: 37 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
