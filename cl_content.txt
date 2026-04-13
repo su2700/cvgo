@@ -1,0 +1,23 @@
+Dear HR Team,
+
+I hope you’re doing well.
+
+I’m reaching out because I deeply admire the work The Tech Collective is doing in agentic red teaming. Your efforts to build tools that dynamically test and secure large language models genuinely inspire me. Although there isn’t a current opening for an AI Red Team Intern, I wanted to introduce myself and express my strong interest in contributing to your team.
+
+My background is in Information Systems and Cyber Security, and I’ve built hands-on experience in penetration testing, DevSecOps, and cloud security. I hold certifications including OSCP+, AWS Certified DevOps Engineer – Professional, Certified Kubernetes Administrator (CKA), and Microsoft Azure Fundamentals. I’ve worked extensively with tools such as Burp Suite, Metasploit, Nmap, and Wireshark, and I enjoy translating vulnerabilities into practical remediation strategies.
+
+Recently, I’ve been focusing on the emerging field of AI security. I’ve been experimenting with large language models, studying prompt injection, jailbreak techniques, and context manipulation, and exploring how agents interact with APIs and cloud services. To deepen my expertise, I am currently preparing for the OffSec AI Security (OSAI) certification in AI Red Teaming. This path reflects my ambition to contribute to the next generation of offensive security.
+
+What draws me to The Tech Collective is your startup mindset, interdisciplinary collaboration, and commitment to innovation. The opportunity to learn from your team and contribute to the development of advanced red team solutions would be incredibly meaningful to me. Even if there isn’t an immediate opportunity, I would be grateful to be considered for future internships or research collaborations.
+
+I’m based in Malmö and would be happy to work remotely or commute to Copenhagen. I would truly appreciate the chance to connect and learn more about your work.
+
+Thank you for your time, and I hope to hear from you.
+
+Warm regards,
+
+Noah H. Liu
+noah.h.liu@gmail.com
++46 76 552 45 58
+LinkedIn: linkedin.com/in/noah-h-liu-2066b846
+GitHub: github.com/su2700

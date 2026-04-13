@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt]{extarticle}
+
+% Packages
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\setstretch{1.25}
+
+% Font Configuration
+\setmainfont{JetBrainsMono-Regular.ttf}[
+    Path = ./,
+    BoldFont = JetBrainsMono-Bold.ttf,
+    ItalicFont = JetBrainsMono-Italic.ttf,
+    BoldItalicFont = JetBrainsMono-BoldItalic.ttf
+]
+\setmonofont{JetBrainsMono-Regular.ttf}[
+    Path = ./,
+    BoldFont = JetBrainsMono-Bold.ttf,
+    ItalicFont = JetBrainsMono-Italic.ttf,
+    BoldItalicFont = JetBrainsMono-BoldItalic.ttf
+]
+
+% Page setup - Generous margins to keep the "code" look centered
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2cm,
+    bottom=2cm
+}
+
+\pagestyle{empty}
+
+% Color definitions (VS Code Dark Theme)
+\definecolor{darkbg}{RGB}{30,30,30}
+\definecolor{textcolor}{RGB}{212,212,212}
+\definecolor{commentcolor}{RGB}{106,153,85}
+
+\renewcommand{\familydefault}{\ttdefault}
+
+\begin{document}
+\pagecolor{darkbg}
+\color{commentcolor}
+\raggedright % Crucial for monospace text to wrap correctly without overflowing
+
+\noindent /*\\
+\noindent COVER LETTER: Noah H. Liu\\
+\noindent \rule{\textwidth}{0.4pt}\\
+\vspace{0.5cm}
+
+INSERT_TEXT_HERE
+
+\vspace{0.5cm}
+\noindent */\\
+
+\end{document}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Default input and output
+INPUT=${1:-coverletter.pdf}
+OUTPUT=${2:-cl.pdf}
+
+# Check if input file exists
+if [ ! -f "$INPUT" ]; then
+    echo "Error: Input file '$INPUT' not found."
+    exit 1
+fi
+
+# Run the python script
+python3 convert_cl.py "$INPUT" "$OUTPUT"
